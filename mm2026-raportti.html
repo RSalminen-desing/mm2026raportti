@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM 2026 — 48 maan puheenaiheet | Mediakoonti 12.5.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@300..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4efe6;
+    --bg-deep: #ebe4d6;
+    --ink: #14110d;
+    --ink-soft: #4a4438;
+    --ink-faint: #8a8472;
+    --accent: #d94f1e;
+    --accent-deep: #a93512;
+    --accent-soft: #f4d6c4;
+    --line: #c9c0ad;
+    --line-soft: #ddd4be;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter Tight', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    font-size: 16px;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(217, 79, 30, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(20, 17, 13, 0.03) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+    padding: 24px 40px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background: rgba(244, 239, 230, 0.96);
+  }
+  .masthead-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .masthead-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    font-variation-settings: "opsz" 144;
+  }
+  .masthead-title em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .masthead-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .masthead-meta span::before {
+    content: "●";
+    color: var(--accent);
+    margin-right: 6px;
+  }
+  .hero {
+    padding: 60px 40px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(42px, 6vw, 84px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144;
+  }
+  .hero-headline strong {
+    font-weight: 700;
+    color: var(--accent);
+    font-style: italic;
+  }
+  .hero-deck {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 300;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+  .hero-stats {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .stat {
+    padding: 18px 16px;
+    border-right: 1px solid var(--line);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .synthesis {
+    padding: 50px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-variation-settings: "opsz" 144;
+  }
+  .themes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .theme {
+    background: var(--bg);
+    padding: 24px;
+  }
+  .theme-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .theme-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .theme-body {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .filters-bar {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 24px 40px;
+    position: sticky;
+    top: 73px;
+    z-index: 50;
+  }
+  .filters-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .filters-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-soft);
+  }
+  .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+  .filter-btn {
+    background: transparent;
+    border: 1px solid rgba(244, 239, 230, 0.25);
+    color: var(--bg);
+    padding: 7px 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-soft);
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+  .search-wrap { margin-left: auto; position: relative; }
+  .search-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.4);
+    color: var(--bg);
+    padding: 8px 0 8px 22px;
+    font-family: var(--sans);
+    font-size: 14px;
+    width: 220px;
+    outline: none;
+  }
+  .search-input::placeholder { color: rgba(244, 239, 230, 0.5); }
+  .search-input:focus { border-bottom-color: var(--accent); }
+  .search-wrap::before {
+    content: "⌕";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--accent-soft);
+  }
+  .grid-wrap {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .result-count {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .result-count strong {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .card {
+    background: var(--bg);
+    padding: 22px 22px 18px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
+  }
+  .card:hover { background: var(--bg-deep); }
+  .card.hidden { display: none; }
+  .card-flag {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 14px;
+    filter: saturate(1.1);
+  }
+  .card-country {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .card-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card-meta .conf { color: var(--accent-deep); font-weight: 700; }
+  .card-meta .lohko::before { content: "·"; margin-right: 6px; color: var(--ink-faint); }
+  .card-snippet {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    flex: 1;
+  }
+  .card-sources {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--line);
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+  .card-sources-label {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .card-cta {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+  }
+  .card-cta::after { content: " →"; }
+
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 17, 13, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: var(--bg);
+    max-width: 820px;
+    width: 100%;
+    padding: 40px 48px 48px;
+    position: relative;
+    border-top: 4px solid var(--accent);
+    margin: auto;
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--ink);
+    line-height: 1;
+    padding: 4px 8px;
+  }
+  .modal-close:hover { color: var(--accent); }
+  .modal-flag { font-size: 48px; margin-bottom: 16px; }
+  .modal-country {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+  .modal-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .modal-meta .sep { color: var(--ink-faint); margin: 0 8px; }
+  .modal-meta strong { color: var(--accent-deep); }
+  .modal-section { margin-bottom: 30px; }
+  .modal-section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .modal-section-label::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .modal-snippet {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 350;
+    color: var(--ink);
+  }
+  .modal-tone-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 16px 20px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    color: var(--ink);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .info-item {
+    background: var(--bg-deep);
+    padding: 14px 16px;
+    border-left: 2px solid var(--accent);
+  }
+  .info-item-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-deep);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .info-item-value {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .media-list { list-style: none; padding: 0; }
+  .media-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line-soft);
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .media-item:last-child { border-bottom: none; }
+  .media-source {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .media-lang {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .media-note {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .modal-sources-line {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .modal-sources-line strong {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 10px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .trends {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 70px 40px;
+  }
+  .trends-inner { max-width: 1400px; margin: 0 auto; }
+  .trends .section-eyebrow { color: var(--accent-soft); }
+  .trends .section-eyebrow::before { background: var(--accent-soft); }
+  .trends .section-title { color: var(--bg); }
+  .trends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .trend {
+    border-top: 2px solid var(--accent);
+    padding-top: 20px;
+  }
+  .trend-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 64px;
+    line-height: 0.9;
+    color: var(--accent);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .trend-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .trend-body {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: rgba(244, 239, 230, 0.78);
+  }
+
+  .colophon {
+    padding: 30px 40px;
+    background: var(--bg-deep);
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .colophon strong { color: var(--ink); }
+
+  @media (max-width: 800px) {
+    .masthead { padding: 16px 20px 12px; }
+    .hero { padding: 30px 20px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--line); }
+    .synthesis, .grid-wrap, .trends { padding: 40px 20px; }
+    .filters-bar { padding: 16px 20px; position: static; }
+    .filters-inner { gap: 16px; }
+    .search-wrap { margin-left: 0; width: 100%; }
+    .search-input { width: 100%; }
+    .trends-grid { grid-template-columns: 1fr; gap: 30px; }
+    .modal { padding: 30px 20px; }
+    .modal-country { font-size: 36px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .media-item { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card { animation: slideUp 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">MM<em>2026</em> · Mediakoonti</div>
+    <div class="masthead-meta">
+      <span>48 maata</span>
+      <span>12.5.2026</span>
+      <span>Riku Salminen / Yle</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <h1 class="hero-headline">Mitä maailma puhuu, <strong>kun kisoihin on kuukausi.</strong></h1>
+    <div>
+      <p class="hero-deck">Tilannekuva 48 osallistujamaan paikallismedioista viikolta 5.–12.5.2026. Jokaisen maan kohdalla mediakohtaiset poiminnat — kuka kirjoitti mitä, millä kielellä, mistä näkökulmasta.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">48</div><div class="stat-label">Maata</div></div>
+        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Lohkoa</div></div>
+        <div class="stat"><div class="stat-num">6</div><div class="stat-label">Konfederaatiota</div></div>
+        <div class="stat"><div class="stat-num">170+</div><div class="stat-label">Lähdettä</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="synthesis">
+  <div class="section-eyebrow">Yleissynteesi</div>
+  <h2 class="section-title">Kuusi narratiivia, joita media kierrättää tällä viikolla</h2>
+  <div class="themes">
+    <div class="theme">
+      <div class="theme-num">01</div>
+      <div class="theme-title">Loukkaantumiskriisi on kaikkialla</div>
+      <p class="theme-body">USA menettää Cardoson, Pulisic horjuu. Brasilialta puuttuu Rodrygo ja Militão. Saksa varovainen Musialan kanssa. Hollannilta Schouten ja Xavi Simons. Englannista Eze, Stones, Branthwaite. Yhteinen pulma kaikkialla.</p>
+    </div>
+    <div class="theme">
+      <div class="theme-num">02</div>
+      <div class="theme-title">Debytantit ovat inhimillisiä tarinoita</div>
+      <p class="theme-body">Kap Verde rekrytoi kapteenin LinkedInin kautta. Curaçao menetti Advocaatin. Uzbekistan palkkasi Cannavaron. Jordania pelaa Jamal Sellamin alaisuudessa ensimmäistä kisaansa.</p>
+    </div>
+    <div class="theme">
+      <div class="theme-num">03</div>
+      <div class="theme-title">Iran-kysymys leijuu turnauksen yllä</div>
+      <p class="theme-body">Iranin liiton presidentti listasi viikolla 10 ehtoa osallistumiselle. Logistiikka Yhdysvalloissa on poikkeuksellisen monimutkaista. Infantino vakuuttaa: Iran pelaa. Ottelut Los Angelesiin ja Seattleen.</p>
+    </div>
+    <div class="theme">
+      <div class="theme-num">04</div>
+      <div class="theme-title">Ronaldo, Messi, Modrić — viimeinen kierros</div>
+      <p class="theme-body">Martínez: Ronaldon paikka ei neuvoteltavissa. Scaloni asetti Messin 55:n esilistalle. Modrićin Milan-sopimus umpeutuu. Kaikki kolme pelaamassa kuudetta MM-kisaansa — niin myös Memo Ochoa.</p>
+    </div>
+    <div class="theme">
+      <div class="theme-num">05</div>
+      <div class="theme-title">Eurooppalaiset paluut</div>
+      <p class="theme-body">Norja palaa 28 vuoden tauon jälkeen, Haaland 16 maalia karsinnoissa. Skotlanti samoin 1998:n jälkeen. Itävalta Rangnickin alaisuudessa. Tšekki selvisi pisimmän reitin kautta — Koubek päävalmentajana 74-vuotiaana.</p>
+    </div>
+    <div class="theme">
+      <div class="theme-num">06</div>
+      <div class="theme-title">Kotikenttäpaineet kasaantuvat</div>
+      <p class="theme-body">USA:ssa kaikki pyörii Pochettinon ympärillä. Kanadassa kysymys on tasapainosta. Meksikossa Aguirren leirikiista jakaa, mutta Ochoan kuudes kisa tasapainottaa tunnelmaa.</p>
+    </div>
+  </div>
+</section>
+
+<div class="filters-bar">
+  <div class="filters-inner">
+    <span class="filters-label">Konfederaatio</span>
+    <div class="filter-group" id="conf-filters">
+      <button class="filter-btn active" data-conf="all">Kaikki</button>
+      <button class="filter-btn" data-conf="UEFA">UEFA</button>
+      <button class="filter-btn" data-conf="CONMEBOL">CONMEBOL</button>
+      <button class="filter-btn" data-conf="CONCACAF">CONCACAF</button>
+      <button class="filter-btn" data-conf="CAF">CAF</button>
+      <button class="filter-btn" data-conf="AFC">AFC</button>
+      <button class="filter-btn" data-conf="OFC">OFC</button>
+    </div>
+    <span class="filters-label">Lohko</span>
+    <div class="filter-group" id="lohko-filters">
+      <button class="filter-btn active" data-lohko="all">Kaikki</button>
+      <button class="filter-btn" data-lohko="A">A</button>
+      <button class="filter-btn" data-lohko="B">B</button>
+      <button class="filter-btn" data-lohko="C">C</button>
+      <button class="filter-btn" data-lohko="D">D</button>
+      <button class="filter-btn" data-lohko="E">E</button>
+      <button class="filter-btn" data-lohko="F">F</button>
+      <button class="filter-btn" data-lohko="G">G</button>
+      <button class="filter-btn" data-lohko="H">H</button>
+      <button class="filter-btn" data-lohko="I">I</button>
+      <button class="filter-btn" data-lohko="J">J</button>
+      <button class="filter-btn" data-lohko="K">K</button>
+      <button class="filter-btn" data-lohko="L">L</button>
+    </div>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="search" placeholder="Etsi pelaajaa, valmentajaa, mediaa…">
+    </div>
+  </div>
+</div>
+
+<section class="grid-wrap">
+  <div class="result-count"><strong id="count">48</strong> / 48 maata näkyvissä — klikkaa korttia, näet mediakohtaiset poiminnat</div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="trends">
+  <div class="trends-inner">
+    <div class="section-eyebrow">Lopuksi</div>
+    <h2 class="section-title">Kolme trendiä, joita kannattaa seurata</h2>
+    <div class="trends-grid">
+      <div class="trend">
+        <div class="trend-num">01</div>
+        <div class="trend-title">Lopullisten 26-listojen julkistuspäivien aalto</div>
+        <p class="trend-body">12.–22.5. on käytännössä jokaisen valmentajan totuuden hetki. Iso joukko avainpelaajia jää viime hetken loukkaantumisten takia pois — Brasiliassa (Rodrygo), USA:ssa (Cardoso), Hollannissa (Schouten/Xavi Simons), Saksassa (Musialan epävarmuus). Yleisön ja median huomio painottuu siihen, ketkä jättivät paperisotaan kynsipalat.</p>
+      </div>
+      <div class="trend">
+        <div class="trend-num">02</div>
+        <div class="trend-title">Politiikka ja logistiikka</div>
+        <p class="trend-body">Iran-keskustelu on isoin makropoliittinen kysymys. Irakin viisumiongelmat osoittavat, että MM-kisojen 48-joukkueen formaatti tuo mukanaan haasteita, joita kahdeksan vuotta sitten ei pohdittu. Mahdollinen USA–Iran 16-osafinaali Dallasissa 3.7. on jo nyt median huomion kohteena.</p>
+      </div>
+      <div class="trend">
+        <div class="trend-num">03</div>
+        <div class="trend-title">Debytantit ja paluut</div>
+        <p class="trend-body">Kap Verde, Curaçao, Jordania ja Uzbekistan tuovat MM-kisoille uusia tarinoita. Norja (28 v), Etelä-Afrikka (16 v), Skotlanti (28 v) ja Tšekki (20 v) palaavat. LinkedIn-rekrytointi, Cannavaro-yllätys, Advocaatin lähtö — inhimillisesti rikas turnaus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <strong>MM2026-uutisagentti</strong> · Claude-projekti · Lähteet: kunkin maan paikallismediat, 5.–12.5.2026
+</footer>
+
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close" aria-label="Sulje">×</button>
+    <div class="modal-flag" id="modal-flag"></div>
+    <h2 class="modal-country" id="modal-country"></h2>
+    <div class="modal-meta" id="modal-meta"></div>
+
+    <div class="modal-section">
+      <div class="modal-section-label">Tilannekuva</div>
+      <p class="modal-snippet" id="modal-snippet"></p>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-label">Avainpelaajat &amp; ottelu</div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-item-label">Avainpelaajat</div>
+          <div class="info-item-value" id="modal-players"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-item-label">Avausottelu</div>
+          <div class="info-item-value" id="modal-match"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-label">Mediakohtaiset poiminnat</div>
+      <ul class="media-list" id="modal-media"></ul>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-label">Median sävy</div>
+      <div class="modal-tone-text" id="modal-tone"></div>
+    </div>
+
+    <div class="modal-sources-line" id="modal-sources-line"></div>
+  </div>
+</div>
+
+<script>
+// ============ DATA — embedded ============
+// Auto-loaded country data for MM2026 dashboard
+const countries = [
+  // ============ ISÄNTÄMAAT (CONCACAF) ============
+  {
+    flag:"🇺🇸", name:"Yhdysvallat", conf:"CONCACAF", lohko:"D",
+    lohkoLisa:"Paraguay, Australia, Turkki",
+    period:"11.–12.5.2026",
+    snippet:"Loukkaantumiskriisi pienoiskoossa: Cardoson nilkkaleikkaus, Pulisicin lihasongelma. Pochettino paljastaa 26 hengen ryhmän 26.5. Pier 17:llä — ensimmäinen julkinen 'roster reveal' liiton historiassa.",
+    tone:"Hermostunut, mutta säilyttää isäntämaaylpeyden. Loukkaantumiset hallitsevat keskustelua, mutta 'Never Chase Reality' -kampanja vahvistaa narratiivia.",
+    keyMatch:"Avausottelu Paraguayta vastaan 12.6. Los Angelesissa.",
+    keyPlayers:"Folarin Balogun (19 maalia), Ricardo Pepi (17 maalia), Haji Wright, Tyler Adams, Christian Pulisic",
+    mediaTalk:[
+      { source:"CBS Sports", lang:"englanti", note:"Raportoi maanantaina Johnny Cardoson nilkkaleikkauksesta Atlético Madridissa. Pochettino menettää vahvimman defensiivisen keskikenttänsä, Tyler Adamsin partnerin." },
+      { source:"World Soccer Talk", lang:"englanti", note:"Vahvisti Cardoso-tiedon samana päivänä CBS:n kanssa. Korosti, että vaihtoehtoja on vähän — kaikki perusvaihtoehdot ovat 'lähes Champions League -tasoa heikompia'." },
+      { source:"Sports Illustrated", lang:"englanti", note:"Sunnuntain pääuutinen: Christian Pulisic jätettiin AC Milanin ottelussa pois lihasongelman takia. Sitaatti, että Pochettino on 'saanut joukkueensa kääriä kuplamuoviin'." },
+      { source:"U.S. Soccer / FOX-kanavat", lang:"englanti", note:"Liiton oma kommunikaatio: lopullinen 26 hengen ryhmä paljastetaan tiistaina 26.5. Pier 17:n katolla New Yorkissa — ensimmäinen julkinen 'roster reveal' liiton historiassa, FOX lähettää suorana." }
+    ],
+    sources:"Sports Illustrated, CBS Sports, World Soccer Talk, U.S. Soccer"
+  },
+  {
+    flag:"🇨🇦", name:"Kanada", conf:"CONCACAF", lohko:"B",
+    lohkoLisa:"Bosnia ja Hertsegovina, Qatar, Sveitsi",
+    period:"11.–12.5.2026",
+    snippet:"Liitto ei julkaise esilistaa, vaikka FIFA sallii. Marsch haluaa kantaa loukkaantuneita pelaajia mahdollisimman pitkälle. Promise David aikataulukilpailussa lonkkavammasta.",
+    tone:"Toiveikas mutta varovainen. Bosnian valmius julkistaa ryhmänsä jo 11.5. lisää painetta omaan ajoitukseen.",
+    keyMatch:"Avausottelu Bosniaa vastaan 12.6. BMO Fieldillä Torontossa.",
+    keyPlayers:"Promise David (epävarma), Moise Bombito, Derek Cornelius, Alphonso Davies, Jonathan David",
+    mediaTalk:[
+      { source:"Canadian Soccer Daily", lang:"englanti", note:"Nosti maanantaina esiin liiton periaatteellisen päätöksen olla julkaisematta esilistaa, vaikka FIFA sallii sen. Marschin sitaatti: haluaa 'kantaa loukkaantuneita pelaajia mahdollisimman pitkälle'." },
+      { source:"Sportsnet", lang:"englanti", note:"Seurasi kanadalaisen fysioterapeutin lähettämistä Nizzaan helpottamaan Moise Bombiton kuntoutusta. Pelaajan paikka ryhmässä yhä epävarma." },
+      { source:"TSN", lang:"englanti", note:"Yhtyi Sportsnetin Bombito-uutiseen ja nosti rinnalle Derek Corneliuksen tilanteen. Päähyökkääjä Promise Davidista uutta: 'aikataulukilpailu' lonkkavammasta." },
+      { source:"CBC Sports", lang:"englanti", note:"Keskittyi ystävyysotteluihin: Uzbekistan 1.6. ja Irlanti 5.6. — MM-valmistautumisen viimeiset askeleet ennen avausta." }
+    ],
+    sources:"Canadian Soccer Daily, Sportsnet, TSN, CBC Sports"
+  },
+  {
+    flag:"🇲🇽", name:"Meksiko", conf:"CONCACAF", lohko:"A",
+    lohkoLisa:"Etelä-Afrikka, Etelä-Korea, Tšekki",
+    period:"10.–11.5.2026",
+    snippet:"Aguirren \"polemikinen keskittämisharjoitusleiri\" jakaa mielipiteitä. Chivas-omistaja käski pelaajiaan välttämään leiriä, Aguirre vastasi: kuka ei tule, jää kisoista pois. Memo Ochoan kuudes MM-kisa varmistui.",
+    tone:"Ristiriitainen ja jännittynyt. Aguirre kannattaa kovaa linjaa, mutta klubit kapinoivat. Sentimentaaliset elementit (Ochoa, Estadio Azteca) tasapainottavat tunnelmaa.",
+    keyMatch:"Avaa koko MM-kisat Etelä-Afrikkaa vastaan Estadio Aztecalla 11.6. (100 000 katsojaa).",
+    keyPlayers:"Memo Ochoa (40 v, kuudes MM-kisa), Raúl Rangel (uusi ykkösmaalivahti Malagónin loukkaannuttua), Edson Álvarez, Hirving Lozano",
+    mediaTalk:[
+      { source:"Récord", lang:"espanja", note:"Nosti esiin Miguel 'Piojo' Herreran kritiikin Aguirren leirijärjestelmästä — 'ei toimi', kun pelaajat ovat ristiriidassa seurojensa kanssa Liguillan aikana." },
+      { source:"Infobae México", lang:"espanja", note:"Viikon suurin otsikko: Memo Ochoan kuudennen MM-kisansa varmistuminen 40-vuotiaana. Liittyy Messin ja Ronaldon kanssa kolmeksi pelaajaksi, jotka pelaavat kuudet kisat." },
+      { source:"TUDN", lang:"espanja", note:"Käsitteli sukupolvenvaihdosta maaliviivalla: Raúl Rangel saa esikoispolttoaineensa, kun Luis Ángel Malagón loukkaantui. Korosti myös Estadio Aztecan historiallista latausta." },
+      { source:"SinEmbargo", lang:"espanja", note:"Politisoituneempi sävy: Chivas-omistaja Amaury Vergara käski pelaajiaan olemaan menemättä Aguirren leirille. Aguirren vastaus poimittu otsikoksi: 'Joka ei tule, jää MM-kisoista pois.'" }
+    ],
+    sources:"Récord, Infobae, TUDN, SinEmbargo"
+  },
+
+  // ============ UEFA ============
+  {
+    flag:"🏴󠁧󠁢󠁥󠁮󠁧󠁿", name:"Englanti", conf:"UEFA", lohko:"L",
+    lohkoLisa:"Kroatia, Ghana, Panama",
+    period:"11.–12.5.2026",
+    snippet:"Tuchelin lopullinen 26 hengen lista 22.5. Ben White'lla epämääräinen polvivamma, Eze sivussa 4–6 viikoksi. Maaliskuun harjoitusottelut Uruguay (1-1) ja Japani (0-1) jättivät kysymysmerkkejä.",
+    tone:"Itsekriittinen mutta perusoptimistinen. Tuchel-kausi on tuottanut kuusi karsintaa 100 % voitto-osuudella, mutta valmennustyyli herättää keskustelua.",
+    keyMatch:"Avausottelu Kroatiaa vastaan 17.6.",
+    keyPlayers:"Harry Kane (55 maalia 49 ottelussa Bayernille), Jude Bellingham, Cole Palmer, Phil Foden, Bukayo Saka",
+    mediaTalk:[
+      { source:"Sky Sports", lang:"englanti", note:"Vahvisti Tuchelin 26 hengen listan julkistuspäivän (pe 22.5.). Ennakkomateriaalia oli julkaistu jo 11.5. — pohja muuttuu vain loukkaantumisten myötä." },
+      { source:"BBC Sport", lang:"englanti", note:"Eze sivussa pohjevamman takia 4–6 viikoksi — listalle ei mahdu. Grealish ja Branthwaite poissa kokonaan. Käsitteli myös Tuchelin valmennustyylin polarisoivuutta." },
+      { source:"The Athletic UK", lang:"englanti", note:"Ben White'n 'epämääräinen' polvivamma West Hamia vastaan 11.5. Artetan sitaatti: 'ei näytä hyvältä'. Pohti, ehtiikö White ryhmään." },
+      { source:"ESPN UK", lang:"englanti", note:"Itsekriittinen analyysi maaliskuun harjoitusotteluista: Uruguay 1-1 ja Japani 0-1. Ilman Kanea joukkue oli 'hampaaton' — riippuvuus Bayernin ykköshyökkääjästä huolestuttava." }
+    ],
+    sources:"BBC Sport, Sky Sports, The Athletic UK, ESPN UK, Sports Mole"
+  },
+  {
+    flag:"🇫🇷", name:"Ranska", conf:"UEFA", lohko:"I",
+    lohkoLisa:"Senegal, Norja, Irak",
+    period:"11.–12.5.2026",
+    snippet:"Deschamps julkistaa ryhmän 14.5. — viimeinen MM-listansa ennen Zidanen tuloa. Ekitiké pois Liverpoolin loukkaantumisen takia. Tukikohta Boston.",
+    tone:"Tyyni ja itsevarma. Ranska on FIFA-rankingin kärjessä ja media kohtelee MM-kisoja Deschampsin pitkän kauden luonnollisena loppuhuipennuksena.",
+    keyMatch:"Lohkon päätösottelu Norjaa vastaan Bostonissa 26.6.",
+    keyPlayers:"Kylian Mbappé, Ousmane Dembélé, Michael Olise, Aurélien Tchouaméni, N'Golo Kanté, Dayot Upamecano, Ibrahima Konaté",
+    mediaTalk:[
+      { source:"L'Équipe", lang:"ranska", note:"Pääjuttu: Deschamps julkistaa ryhmän torstaina 14.5. Päivä siirtyi alkuperäisestä 13.5:stä PSG-Lens-ottelun takia. Korosti, että tämä on Deschampsin viimeinen MM-lista." },
+      { source:"FFF / liiton kanavat", lang:"ranska", note:"Vahvisti joukkueen tukikohdaksi Bostonin koko turnauksen ajan. Lohkon päätösottelu Norjaa vastaan pelataan myös Bostonissa." },
+      { source:"90min FR", lang:"ranska", note:"Ennakoi kokoonpanon: Tchouaméni ja N'Golo Kanté takaisin keskikentälle, Upamecano ja Konaté kilpailevat keskuspuolustuksessa. Mbappé–Dembélé–Olise -trio hyökkäyksessä." },
+      { source:"ICI (entinen France Info)", lang:"ranska", note:"Käsitteli Hugo Ekitikén poisjäämistä Liverpoolin loukkaantumisen takia. Pohti Zidanen tulevaa pestiä — toivottu seuraaja Deschampsille 2026 jälkeen." }
+    ],
+    sources:"L'Équipe, FFF, 90min FR, ICI"
+  },
+  {
+    flag:"🇩🇪", name:"Saksa", conf:"UEFA", lohko:"E",
+    lohkoLisa:"Curaçao, Norsunluurannikko, Ecuador",
+    period:"9.–12.5.2026",
+    snippet:"Nagelsmann julkistaa WM-Kaderin 21.5. Musialan jalkavamma huolettaa — Atalanta-ottelussa kipureaktio palasi. Tukikohta Graylyn Estate, Winston-Salem.",
+    tone:"Realistisen optimistinen. Suuri suosikkiusko on hiipunut Euron tappioiden jälkeen, mutta odottaa solidia esitystä. Trumpin asemointi MM-kisoissa herättää erillistä polemiikkia.",
+    keyMatch:"Avausottelu Curaçaoa vastaan 14.6. Houstonissa.",
+    keyPlayers:"Jamal Musiala (epävarma), Kai Havertz, Antonio Rüdiger, Joshua Kimmich, Florian Wirtz, Lennart Karl (18, uusi tulokas)",
+    mediaTalk:[
+      { source:"Sportschau (ARD)", lang:"saksa", note:"Vahvisti Nagelsmannin WM-Kaderin julkistuspäivän torstaina 21.5. Musialan kipureaktio Atalanta-ottelussa toukokuun alussa oli pääuutinen — tilanne 'hauras'." },
+      { source:"Kicker", lang:"saksa", note:"Neliosainen kausikatsaus joukkueesta. Pohti Manuel Neuerin perinnön ottavia maalivahteja: Jonas Urbig nousi vaihtoehdoksi. Lennart Karl (18, Bayern) uusi kasvo." },
+      { source:"Sky Sport DE", lang:"saksa", note:"Seurasi maaliskuun palautettujen pelaajien tilannetta (Havertz, Rüdiger, Undav). Korosti Vincent Kompanyn ja Nagelsmannin tiivistä yhteydenpitoa Musialan tilanteesta." },
+      { source:"news.de", lang:"saksa", note:"Käsitteli erikseen Trumpin asemointia MM-kisoissa — herättää saksalaismediassa polemiikkia, joka jää muutoin urheilukysymysten varjoon." }
+    ],
+    sources:"Kicker, Sportschau (ARD), Sky Sport DE, news.de"
+  },
+  {
+    flag:"🇪🇸", name:"Espanja", conf:"UEFA", lohko:"H",
+    lohkoLisa:"Kap Verde, Saudi-Arabia, Uruguay",
+    period:"11.–12.5.2026",
+    snippet:"55 hengen esilista oli \"hyvin barceloninen\" — yhdeksän Barça-pelaajaa, vain yksi Real Madridin. Lamine Yamal ja Nico Williams loukkaantuneet mutta paikat \"käytännössä taatut\".",
+    tone:"Innokas mutta hieman puolustuskannalla. De la Fuente korostaa, ettei \"tunne painetta\" suosikin asemassa. Katalonian media painottaa Barcelona-akselia hyvin selkeästi.",
+    keyMatch:"Avausottelu Kap Verdettä vastaan Atlantassa 14.6.",
+    keyPlayers:"Lamine Yamal, Nico Williams, Pedri, Gavi, Rodri, Álvaro Morata",
+    mediaTalk:[
+      { source:"Marca", lang:"espanja", note:"Käsitteli 55 hengen esilistan jättämistä FIFA:lle 11.5. Korosti, että lopullinen 26 hengen ryhmä julkistetaan ma 25.5. Suhtautuu Real Madridin yhden pelaajan asemaan tasapainoisemmin kuin AS." },
+      { source:"AS", lang:"espanja", note:"Kriittisempi sävy: nimitti listaa 'hyvin barceloniseksi' — yhdeksän Barça-pelaajaa, vain yksi Real Madridin. Pidetään madridilaisena vastaiskuna katalonialaiseen painotukseen." },
+      { source:"Mundo Deportivo", lang:"espanja", note:"Katalonialainen vastapaino: korosti Pedrin, Gavin ja Yamalin roolia. Käsitteli Yamalin ja Williamsin loukkaantumisia 'pienenä huolena, ei suurena'." },
+      { source:"Infobae España", lang:"espanja", note:"Vahvisti, että Yamalin ja Williamsin paikat lopullisella listalla ovat 'käytännössä taatut'. Dani Carvajalin uskotaan jäävän pois jalkaongelman takia." }
+    ],
+    sources:"Marca, AS, Mundo Deportivo, Infobae España, El Nacional"
+  },
+  {
+    flag:"🇵🇹", name:"Portugali", conf:"UEFA", lohko:"K",
+    lohkoLisa:"Kongo DT, Uzbekistan, Kolumbia",
+    period:"8.–12.5.2026",
+    snippet:"Martínez julisti Ronaldon paikan \"ei-neuvoteltavissa\" 41-vuotiaana. Portugali \"jalkapalloyliopisto\". Lopullinen ryhmä 19.5.",
+    tone:"Hillityn itsevarma. Portugali sijoittuu FIFA-rankingin kuudenneksi, mutta median puhe pyörii Ronaldon \"viimeisen tanssin\" ympärillä.",
+    keyMatch:"Cristiano Ronaldon kuudes MM-kisa — avausottelu vahvistuu lähipäivinä.",
+    keyPlayers:"Cristiano Ronaldo (226 ottelua, 143 maalia), Bernardo Silva, Bruno Fernandes, Vitinha, João Neves, Rafael Leão",
+    mediaTalk:[
+      { source:"Record", lang:"portugali", note:"Sitaattipohja: Martínezin The Guardian -haastattelu — 'Mundial 2026? Deixem-nos sonhar.' (Antakaa meidän haaveilla.) Portugali kuvattu 'jalkapalloyliopistoksi'." },
+      { source:"A Bola", lang:"portugali", note:"Pääjuttu Ronaldosta: paikka 41-vuotiaana 'ei ole neuvoteltavissa'. Tilastoja: 226 ottelua, 143 maalia maajoukkueessa, 25 maalia kauden viimeisissä 30 Al-Nassr-ottelussa." },
+      { source:"Observador", lang:"portugali", note:"Käsitteli lopullisen ryhmän julkistuspäivää (ti 19.5.). Pohja edelleen Nations League 2025 -voittajakokoonpano." },
+      { source:"SAPO Desporto", lang:"portugali", note:"Korosti maan kykyä tuottaa pelaajia kahdeksaan eri positioon ikäluokassa 15–23 — Martínezin sitaatti." }
+    ],
+    sources:"A Bola, Record, Observador, SAPO"
+  },
+  {
+    flag:"🇳🇱", name:"Alankomaat", conf:"UEFA", lohko:"F",
+    lohkoLisa:"Japani, Ruotsi, Tunisia",
+    period:"11.–12.5.2026",
+    snippet:"Koeman jätti FIFA:lle ~40 nimen esilistan. Schouten ja Xavi Simons varmasti pois polvivammojen takia. Timberin enkkavamma huolettaa, De Ligt ei pelannut joulukuun jälkeen.",
+    tone:"Huolestunut. \"Death Group\" -puhe vahvistuu — Japani, Ruotsi ja Tunisia ovat kaikki vakavia uhkia, eivätkä Oranjen tähdet ole täydessä kunnossa.",
+    keyMatch:"Avausottelu Japania vastaan Dallasissa 14.6.",
+    keyPlayers:"Virgil van Dijk, Frenkie de Jong, Memphis Depay, Cody Gakpo, Jurriën Timber (epävarma), Matthijs de Ligt (epävarma)",
+    mediaTalk:[
+      { source:"NOS Sport", lang:"hollanti", note:"Pääuutinen: Koemanin ~40 nimen esilista FIFA:lle. Lopullinen 26 hengen ryhmä julkistetaan 25.5. — kahdeksan päivää ennen FIFA:n deadlinea. Schouten ja Xavi Simons varmasti pois." },
+      { source:"Voetbal International", lang:"hollanti", note:"Pohti 'kuoleman lohkon' realiteetteja — Japani, Ruotsi ja Tunisia kaikki vakavia uhkia. Toi keskusteluun Death Group -termin." },
+      { source:"Algemeen Dagblad (AD Sportwereld)", lang:"hollanti", note:"Käsitteli Tunisian ottelun erikoisuutta: pelataan Kansas Cityssä yöllä ilman katsojia stadionin pienen kapasiteetin takia." },
+      { source:"Voetbal Primeur / Mee Met Oranje", lang:"hollanti", note:"Viikoittainen 'Oranje Selectie Watch' -kolumni: Kluivertin paluu Bournemouthissa epävarma; Timberin enkkavamma — Artetan sitaatti 'perustaja kolme jää pois rivistä'; De Ligt ei pelannut joulukuun jälkeen." }
+    ],
+    sources:"NOS, Voetbal International, Mee Met Oranje, Algemeen Dagblad, Voetbal Primeur"
+  },
+  {
+    flag:"🇧🇪", name:"Belgia", conf:"UEFA", lohko:"G",
+    lohkoLisa:"Egypti, Iran, Uusi-Seelanti",
+    period:"11.–12.5.2026",
+    snippet:"Rudi Garcia julkistaa ryhmän 15.5. Courtois ja De Bruyne avainpelaajat. Lukaku poissa leikkauksen jälkeen. Kolme uutta: De Cat (Anderlecht), Godts (Ajax), Stassin (Saint-Étienne).",
+    tone:"Varovaisen toiveikas. Pelimiehet ovat ikääntyviä, mutta De Bruynen, Courtoisin ja Dokun trio voi tehdä Belgiasta yllätyksen.",
+    keyMatch:"Avausottelu Egyptiä vastaan Seattlessa 15.6.",
+    keyPlayers:"Thibaut Courtois, Kevin De Bruyne, Jérémy Doku, Youri Tielemans, Romelu Lukaku (poissa, leikkaus)",
+    mediaTalk:[
+      { source:"Sporza (VRT)", lang:"hollanti", note:"Vahvisti Rudi Garcian ryhmäjulkistuspäivän pe 15.5. Käsitteli maaliskuun USA-harjoitusleirin (USA, Meksiko ystävyysottelut) opetuksia." },
+      { source:"Het Laatste Nieuws", lang:"hollanti", note:"De Bruynen Napoli-iskussa olo otsikoissa. Korosti, että Courtois on numero ykkönen myös 'nyt'." },
+      { source:"Voetbalbelgie", lang:"hollanti", note:"Listasi 20 'varmaa' nimeä. Kolme uutta tulokasta: Nathan De Cat (Anderlecht), Mika Godts (Ajax), Lucas Stassin (Saint-Étienne)." },
+      { source:"Voetbalkrant", lang:"hollanti", note:"Lukakun poissaolo isossa formaatissa: leikkaus, jonka jälkeen palautuminen voi viedä pitkään. Hyökkääjälinjan vaihtoehtoja käsitelty seikkaperäisesti." }
+    ],
+    sources:"Sporza (VRT), Het Laatste Nieuws, Voetbalkrant, Voetbalbelgie"
+  },
+  {
+    flag:"🇭🇷", name:"Kroatia", conf:"UEFA", lohko:"L",
+    lohkoLisa:"Englanti, Ghana, Panama",
+    period:"10.–12.5.2026",
+    snippet:"Modrićin Milan-sopimus loppuu, jatko epävarma. 39-vuotiaana kuudes MM-kisa — jaettu ennätys Ronaldon ja Messin kanssa. Avausottelu Englantia vastaan 17.6.",
+    tone:"Ylpeä mutta realistinen. \"Vatreni\" tietävät, että tämä on viimeinen kierros Modrićille, ja se antaa lähes runolliselle sävylle.",
+    keyMatch:"Avausottelu Englantia vastaan 17.6.",
+    keyPlayers:"Luka Modrić (39 v, kuudes MM-kisa), Mateo Kovačić, Joško Gvardiol, Andrej Kramarić, Luka Sučić, Joško Šutalo",
+    mediaTalk:[
+      { source:"Index.hr", lang:"kroatia", note:"Päivittäinen Modrić-seuranta: Milan-sopimus loppuu, jatkopäätös epävarma. Kuudes MM-kisa — jaettu ennätys Ronaldon ja Messin kanssa." },
+      { source:"Net.hr", lang:"kroatia", note:"Viikon iso MM-opas: Kroatia toivoo kolmatta peräkkäistä mitalia (hopea 2018, pronssi 2022). Lohko L vaikea Englannin takia." },
+      { source:"Sportske Novosti", lang:"kroatia", note:"Käsitteli Dalićin valmennusvalintaa: kokeneeseen pohjaan luottaminen, mutta Sučićin ja Šutalon kaltaisten nuorten integrointi." },
+      { source:"Jutarnji list", lang:"kroatia", note:"Lopullisen ryhmän julkistuspäivä 18.5. — ennakkomateriaalia kerätty." }
+    ],
+    sources:"Index.hr, Net.hr, Jutarnji list, Sportske Novosti"
+  },
+  {
+    flag:"🇨🇭", name:"Sveitsi", conf:"UEFA", lohko:"B",
+    lohkoLisa:"Kanada, Bosnia, Qatar",
+    period:"5.–7.5.2026",
+    snippet:"Freiburgin 20-vuotias Manzambi nostetaan \"tähtikomeetaksi\". Tukikohta San Diegossa. Yakin nojaa kokemukseen: Xhaka (143 ottelua), Akanji, Embolo.",
+    tone:"Hyvin valmistautunut, ei dramaattisia odotuksia. Yhden vahvan avauksen jälkeen Sveitsi voi olla pimeä hevonen jatkopeleihin.",
+    keyMatch:"Avausottelu Qataria vastaan Levi's Stadiumilla 13.6.",
+    keyPlayers:"Granit Xhaka (143 maajoukkueottelua), Manuel Akanji, Breel Embolo, Johan Manzambi (20, SC Freiburg)",
+    mediaTalk:[
+      { source:"Kicker.ch", lang:"saksa", note:"Nelisarjainen Nati-katsaus: keskikentän 8 paikasta 7 lähes varmoja. Johan Manzambi (SC Freiburg, 20) nostetaan 'tähtikomeetaksi' — maalasi USA:ta vastaan viime kesänä." },
+      { source:"Blick", lang:"saksa", note:"Joukkueen tukikohta San Diegossa — luksushotelli wellness-tiloineen. Yakin keskittää joukkueensa St. Galleniin 25.5.–1.6., minkä jälkeen lento USA:han 2.6." },
+      { source:"SRF Sport", lang:"saksa", note:"Käsitteli Yakinin valintoja: nojaa kokemukseen (Xhaka, Akanji, Embolo) mutta jättää tilaa nuorille tulokkaille." },
+      { source:"NZZ", lang:"saksa", note:"Analyyttisempi sävy: pohti Sveitsin realistisia mahdollisuuksia lohkossa B. Sveitsi 'pimeä hevonen jatkopeleihin' yhden vahvan avauksen jälkeen." }
+    ],
+    sources:"Blick, Kicker.ch, SRF Sport, NZZ"
+  },
+  {
+    flag:"🇳🇴", name:"Norja", conf:"UEFA", lohko:"I",
+    lohkoLisa:"Ranska, Senegal, Irak",
+    period:"11.–12.5.2026",
+    snippet:"Paluu MM-kisoihin 28 vuoden tauon jälkeen. Haalandilla 16 maalia karsinnoissa. Italian voitto San Sirossa 4-1 oli karsintojen kruununjalokivi.",
+    tone:"Euforisesti odottava. Norja on 28 vuoden jälkeen palaava — koko kansakunnan tunnelma näkyy mediassa puolimystikon valossa.",
+    keyMatch:"Lohkon päätösottelu Ranskaa vastaan Bostonissa 26.6.",
+    keyPlayers:"Erling Haaland (16 maalia karsinnoissa), Alexander Sørloth, Jørgen Strand Larsen, Martin Ødegaard",
+    mediaTalk:[
+      { source:"VG", lang:"norja", note:"Päähaastattelu: Solbakkenin sitaatti '5–6 paikkaa MM-ryhmässä vielä avoinna'. Esitti väljän 50 nimen listan ja totesi '20–21 paikkaa selvillä'." },
+      { source:"Dagbladet", lang:"norja", note:"Listasi todennäköisen ryhmän: maailmanluokan kärki Haaland–Sørloth–Strand Larsen. 28 vuoden tauon emotionaalinen lataus näkyy otsikoissa." },
+      { source:"Nettavisen", lang:"norja", note:"Mustien vierasasujen sopivuus kuumassa USA:n säässä — vertasi 1990-luvun Olsenin 'jätesäkkitreeneihin'. Solbakkenin vastaus: 'Tätä on tutkittu.'" },
+      { source:"NRK Sport", lang:"norja", note:"Käsitteli Italian voittoa San Sirossa 4-1 'karsintojen kruununjalokivenä'. Haalandin 16 maalia kahdeksassa ottelussa 'uskomaton'." }
+    ],
+    sources:"VG, Dagbladet, Nettavisen, NRK Sport"
+  },
+  {
+    flag:"🏴󠁧󠁢󠁳󠁣󠁴󠁿", name:"Skotlanti", conf:"UEFA", lohko:"C",
+    lohkoLisa:"Brasilia, Marokko, Haiti",
+    period:"11.–12.5.2026",
+    snippet:"Paluu MM-kisoihin 1998 jälkeen. Maaliskuun harjoitusotteluissa tappiot Japanille ja Norsunluurannikolle. Maalivahti Gordon ei pelannut sitten 25.1. olkapäävamman takia.",
+    tone:"Liikuttunut, lähes uskomaton tunne. Hampdenin Tanska-yön muisto värittää kaikkea — tappioita harjoitusotteluissa pidetään häiriönä, ei merkkinä syvemmästä ongelmasta.",
+    keyMatch:"Avausottelu Haitia vastaan Foxborossa 14.6.",
+    keyPlayers:"Andy Robertson, John McGinn, Scott McTominay, Aaron Hickey, Craig Gordon (maalivahti, epävarma)",
+    mediaTalk:[
+      { source:"BBC Scotland", lang:"englanti", note:"Vahvisti, että Clarken 26 hengen ryhmä julkistetaan pe 22.5. 'Tartan Army' elää suurta hetkeään 1998 jälkeen." },
+      { source:"Sky Sports Scotland", lang:"englanti", note:"Hampdenin Tanska-yön muisto edelleen kantava narratiivi. Tappioita harjoitusotteluissa pidetään häiriönä, ei syvemmän ongelman merkkinä." },
+      { source:"The Herald", lang:"englanti", note:"Käsitteli Craig Gordonin tilannetta: ei pelannut sitten 25.1. olkapäävamman takia. Aaron Hickeyn paluu Brentfordissa Manchester Cityä vastaan 'iso helpotus'." },
+      { source:"Daily Record", lang:"englanti", note:"Tabloid-näkökulma maaliskuun harjoitusotteluihin: Japani ja Norsunluurannikko molemmat 0-1 -tappioita, mikä laski tunnelmaa." }
+    ],
+    sources:"BBC Scotland, Sky Sports Scotland, The Herald, Daily Record"
+  },
+  {
+    flag:"🇦🇹", name:"Itävalta", conf:"UEFA", lohko:"J",
+    lohkoLisa:"Argentiina, Algeria, Jordania",
+    period:"10.–12.5.2026",
+    snippet:"Paluu 1998 jälkeen. Rangnick on saanut maan kahteen peräkkäiseen suureen turnaukseen. Kapteenina Alaba, avainpelaajat Arnautović (37 v, 8 maalia karsinnoissa) ja Sabitzer.",
+    tone:"Pragmaattinen toiveikkuus. Rangnickin järjestelmällisyys on saanut median luottamaan, että joukkue voi yllättää.",
+    keyMatch:"Avausottelu Jordaniaa vastaan Santa Clarassa 16.6.",
+    keyPlayers:"David Alaba (kapteeni), Marko Arnautović (37 v, 8 maalia karsinnoissa), Marcel Sabitzer, Konrad Laimer",
+    mediaTalk:[
+      { source:"Krone", lang:"saksa", note:"Rangnickin saavutus — kaksi peräkkäistä suurta turnausta — historiallinen Itävallalle. Lopullinen ryhmä ma 18.5." },
+      { source:"Kurier", lang:"saksa", note:"Käsitteli Arnautovićin roolia 37-vuotiaana. Karsintamaalit (8 kpl) avaintilastona." },
+      { source:"Laola1", lang:"saksa", note:"Lohkoanalyysi: Argentiina-tappio tunnustettu todennäköiseksi, mutta Algeria ja Jordania 'lyötävissä jatkokarsintaan'." },
+      { source:"FourFourTwo (kv-kattaja)", lang:"englanti", note:"Englanninkielinen läpileikkaus Rangnickin järjestelmällisyydestä, jolla joukkue voi yllättää suurmaita." }
+    ],
+    sources:"Krone, Kurier, Laola1, FourFourTwo"
+  },
+  {
+    flag:"🇨🇿", name:"Tšekki", conf:"UEFA", lohko:"A",
+    lohkoLisa:"Meksiko, Etelä-Afrikka, Etelä-Korea",
+    period:"8.–12.5.2026",
+    snippet:"Selvisi pisimmän reitin kautta — rangaistuspotkuvoitot Irlannista ja Tanskasta. Päävalmentaja Koubek 74-vuotiaana. Souček, Coufal, Schick avainpelaajat.",
+    tone:"Yllättynyt mutta tyytyväinen. Selviytyminen oli odottamatonta, ja media on käsitellyt sitä eräänlaisena lahjana.",
+    keyMatch:"Avausottelu Etelä-Koreaa vastaan Guadalajarassa 11.6. (turnauksen toinen ottelu).",
+    keyPlayers:"Tomáš Souček (West Ham), Vladimír Coufal, Patrik Schick",
+    mediaTalk:[
+      { source:"iSport.cz", lang:"tšekki", note:"Korosti Koubekin (74) syvää tuntemusta kotimaisesta jalkapallosta. Hän sai työn yllätyksenä joulukuussa 2025." },
+      { source:"Sport.cz", lang:"tšekki", note:"Karsintojen pisin reitti: rangaistuspotkuvoitot Irlannista ja Tanskasta (molemmat 2-2). Paluu MM-kisoihin 2006 jälkeen." },
+      { source:"ČT Sport", lang:"tšekki", note:"Yleisradio-näkökulma: pelaajien profiilit, varsinkin Souček, Coufal ja Schick." },
+      { source:"UEFA-aineisto", lang:"englanti", note:"Karsintaformaatin selitykset ja ranking-tilanne käytetty pohjamateriaalina." }
+    ],
+    sources:"iSport.cz, Sport.cz, ČT Sport, UEFA"
+  },
+  {
+    flag:"🇧🇦", name:"Bosnia ja Hertsegovina", conf:"UEFA", lohko:"B",
+    lohkoLisa:"Kanada, Qatar, Sveitsi",
+    period:"11.5.2026",
+    snippet:"Ensimmäinen joukkue, joka julkisti lopullisen MM-ryhmänsä — 11.5. Edin Džeko (39) johtaa joukkueen toiseen MM-kisaansa. Italian voitto rangaistuspotkukilpailussa oli legendaarinen.",
+    tone:"Erittäin ylpeä ja itsevarma. Italian voitto antaa tunteen, että Bosnia voi tehdä jotain merkittävää.",
+    keyMatch:"Avausottelu Kanadaa vastaan 12.6. Torontossa.",
+    keyPlayers:"Edin Džeko (39 v, kapteeni), Miralem Pjanić, Sead Kolašinac",
+    mediaTalk:[
+      { source:"Klix.ba", lang:"bosnia", note:"Italian voitto rangaistuspotkukilpailussa 'vuosisadan jalkapallotapahtumaksi'. Italia kolmannen kerran peräkkäin pois MM-kisoista." },
+      { source:"Sportsport.ba", lang:"bosnia", note:"Bosnia oli ensimmäinen joukkue, joka julkisti lopullisen ryhmänsä — 11.5. Barbarez ei jättänyt suuria yllätyksiä." },
+      { source:"Dnevni avaz", lang:"bosnia", note:"Käsitteli Edin Džekon roolia 39-vuotiaana: ensimmäinen kerta MM-kisoissa sitten vuoden 2014." },
+      { source:"Olympics.com (kv-kattaja)", lang:"englanti", note:"Käytetty kansainvälisenä vahvistuksena Bosnian ryhmäjulkistukselle." }
+    ],
+    sources:"Klix.ba, Sportsport.ba, Dnevni avaz, Olympics.com"
+  },
+  {
+    flag:"🇸🇪", name:"Ruotsi", conf:"UEFA", lohko:"F",
+    lohkoLisa:"Hollanti, Japani, Tunisia",
+    period:"8.–10.5.2026",
+    snippet:"Graham Potter ohjasi Ruotsin playoff-voittoihin: Ukrainasta (3-1, Gyökeres kolme maalia) ja Polasta (3-2). Kolme- tai viisi-puolustajajärjestelmä, korkeaa pressingiä.",
+    tone:"Iloisesti yllättynyt. Ennen Potterin saapumista pelättiin pahinta — nyt tunnelma on rauhallinen ja jopa toiveikas.",
+    keyMatch:"Lohko F nimettiin 'kuoleman lohkoksi' — Tunisia, Hollanti, Japani.",
+    keyPlayers:"Viktor Gyökeres (kolme maalia playoffeissa), Alexander Isak, Dejan Kulusevski",
+    mediaTalk:[
+      { source:"Aftonbladet", lang:"ruotsi", note:"Käsitteli Potterin saapumisen vaikutuksia: irtisanottu Jon Dahl Tomasson korvattiin syksyllä 2025. Playoff-voitot Ukrainasta ja Polasta käännekohta." },
+      { source:"SVT Sport", lang:"ruotsi", note:"Yleisradio: Alexander Isakin Newcastle-tilanne ei vaikuta MM-listalle. Lopullinen ryhmä julkistetaan to 14.5." },
+      { source:"Tvmatchen", lang:"ruotsi", note:"Tarkka taktinen analyysi Potterin tyylistä: kolme- tai viisi-puolustajajärjestelmä, korkeaa pressingiä, taktisia muutoksia kesken kentän." },
+      { source:"Sportbladet", lang:"ruotsi", note:"Pelaajien luottamuksen kasvua nostettiin esiin — selkeä muutos verrattuna Tomassonin loppukauteen." }
+    ],
+    sources:"Aftonbladet, SVT Sport, Tvmatchen, Sportbladet"
+  },
+  {
+    flag:"🇹🇷", name:"Turkki", conf:"UEFA", lohko:"D",
+    lohkoLisa:"Yhdysvallat, Paraguay, Australia",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu pitkän tauon jälkeen — viimeksi 2002, sijoitus kolmas. Arda Güler nousi Fox Sportsin top-100:ssa korkeammalle kuin Son Heung-min.",
+    tone:"Innostunut ja kunnianhimoinen. Nuori sukupolvi tuo karismaattista energiaa — Güler on jo nyt kansainvälisen median tähti.",
+    keyMatch:"Avausottelu Australiaa vastaan Vancouverissa 13.6.",
+    keyPlayers:"Arda Güler (Real Madrid), Hakan Çalhanoğlu (Galatasaray), Kerem Aktürkoğlu",
+    mediaTalk:[
+      { source:"Fanatik", lang:"turkki", note:"Pääuutinen Arda Gülerin noususta Fox Sportsin top-100:ssa korkeammalle kuin Son Heung-min." },
+      { source:"Fotomaç", lang:"turkki", note:"Käsitteli playoff-voittoa, joka vahvisti paikan MM-kisoissa. Edellinen osallistuminen 2002 (kolmas sija)." },
+      { source:"Hürriyet Spor", lang:"turkki", note:"Çalhanoğlun ja Aktürkoğlun avainrooli Galatasarayn taustoilta. Karsinnoissa kaksi 0-0 -ottelua Espanjaa vastaan." },
+      { source:"NTV Spor", lang:"turkki", note:"Lohkoanalyysi: USA isäntämaana raskas, mutta Paraguay ja Australia 'lyötävissä'." }
+    ],
+    sources:"Fanatik, Fotomaç, Hürriyet Spor, NTV Spor"
+  },
+
+  // ============ CONMEBOL ============
+  {
+    flag:"🇦🇷", name:"Argentiina", conf:"CONMEBOL", lohko:"J",
+    lohkoLisa:"Algeria, Itävalta, Jordania",
+    period:"11.–12.5.2026",
+    snippet:"Scaloni julkisti 11.5. AFA:n 55 hengen esilistan. Messi listalla, vaikka ei vielä vahvistanut osallistumistaan. Kuusi maailmanmestaria poissa, mukana River Plate -maalivahti Beltrán.",
+    tone:"Itsevarma ja sentimentaalinen. Messin viimeinen MM-kisoja koskeva keskustelu antaa kaikkeen elegisen sävyn.",
+    keyMatch:"Avausottelu Algeriaa vastaan Kansas Cityssä 16.6.",
+    keyPlayers:"Lionel Messi (kuudes MM-kisa, ei vielä vahvistanut), Lautaro Martínez, Julián Álvarez, Rodrigo De Paul, Enzo Fernández",
+    mediaTalk:[
+      { source:"Olé", lang:"espanja", note:"Vahvisti Messin 55-listalla. Sitaatti aiemmasta Messin haastattelusta: osallistuu vain jos 'fyysisesti huipulla'." },
+      { source:"Clarín", lang:"espanja", note:"Käsitteli Scalonin huoltaa Lautaro Martínezin loukkaantumisriskistä ja pohti De Paulin paikkaa avauskokoonpanossa." },
+      { source:"Infobae", lang:"espanja", note:"Pääjuttu: kuusi maailmanmestaria poissa esilistalta — Armani (eläköityi), Di María (eläköityi), Dybala (loukkaantumiset), Papu Gómez (dopingsuspensio), Foyth, Lo Celso. Yllätys: River Plate -maalivahti Santiago Beltrán mukana." },
+      { source:"CNN en Español", lang:"espanja", note:"Latinalaisamerikan kattaja Messin osallistumistilanteesta. Lopullinen 26 hengen ryhmä julkistetaan 30.5." },
+      { source:"Bolavip", lang:"espanja", note:"Käsitteli Messi-vaikutusta lipunmyyntiin ja median huomioon Kansas Cityn avausottelussa." }
+    ],
+    sources:"Olé, Clarín, Infobae, CNN en Español, Bolavip"
+  },
+  {
+    flag:"🇧🇷", name:"Brasilia", conf:"CONMEBOL", lohko:"C",
+    lohkoLisa:"Marokko, Haiti, Skotlanti",
+    period:"11.–12.5.2026",
+    snippet:"Ancelotti toimitti 55 hengen esilistan 11.5. Lopullinen 26 julkistetaan 18.5. Museu do Amanhãsta Riosta. Rodrygo ja Militão pois loukkaantumisten takia. Neymar viikon mysteeri.",
+    tone:"Jännittynyt ja jakautunut. Ancelotti — ensimmäinen ulkomainen päävalmentaja Brasilian MM-kisoissa — on saanut sekä kiitosta että kritiikkiä.",
+    keyMatch:"Avausottelu Marokkoa vastaan MetLife Stadiumilla 13.6.",
+    keyPlayers:"Vinícius Júnior, Raphinha, Bruno Guimarães, Neymar (epävarma), Rodrygo (poissa, ristisidevamma), Eder Militão (poissa)",
+    mediaTalk:[
+      { source:"Globo Esporte", lang:"portugali", note:"Pääuutinen Ancelottin 55-listan jättämisestä FIFA:lle 11.5. Lopullinen 26 julkistetaan 18.5. Museu do Amanhãsta Rio de Janeirossa." },
+      { source:"Lance!", lang:"portugali", note:"Korosti Museu do Amanhãn symboliikkaa: rakennettu 'tulevaisuuden museona', ja sieltä julkistetaan uuden Brasilian aloitus." },
+      { source:"Terra", lang:"portugali", note:"Rodrygon (etummaisen ristisiteen repeämä) ja Militãon (jänteen leikkaus, paluu lokakuussa 2026) menetykset isossa fokuksessa." },
+      { source:"Correio Braziliense", lang:"portugali", note:"Kriittinen ääni Ancelottin valmennusta kohtaan — ensimmäinen ulkomaalainen päävalmentaja Brasilian MM-kisoissa." },
+      { source:"KondZilla", lang:"portugali", note:"Otsikoi: 'Neymar — viikon suurin mysteeri.' Ancelotin sitaatti: 'Hän tulee mukaan vain, jos on 100 % fyysisesti.'" }
+    ],
+    sources:"Globo Esporte, Lance!, Terra, Correio Braziliense, KondZilla"
+  },
+  {
+    flag:"🇨🇴", name:"Kolumbia", conf:"CONMEBOL", lohko:"K",
+    lohkoLisa:"Portugali, Kongo DT, Uzbekistan",
+    period:"11.–12.5.2026",
+    snippet:"James Rodríguez liittyy 17.5. Karsinnoissa kaksi suurta tappiota peräkkäin (Brasilia 1-2, Paraguay 2-2) ja sija 4 CONMEBOLissa. Vakavin huoli: Luis Díazin kunto.",
+    tone:"Levoton mutta toiveikas. James Rodríguezin paluu maajoukkueeseen herättää keskustelua siitä, voiko 34-vuotias yhä nostaa joukkueen.",
+    keyMatch:"Avausottelu Kongo DT:tä vastaan Miamissa 17.6.",
+    keyPlayers:"Luis Díaz (epävarma kunto), James Rodríguez (34 v, paluu), Jhon Durán, Davinson Sánchez",
+    mediaTalk:[
+      { source:"El Tiempo", lang:"espanja", note:"Pääuutinen Jamesin liittymisestä joukkueeseen 17.5. Lorenzo on jättänyt esilistalleen avainpelaajia ja avannut ovia tulokkaille." },
+      { source:"El Espectador", lang:"espanja", note:"Lopullisen ryhmän julkistuspäivä 29.5. Karsintojen tappiot Brasilialle (1-2) ja Paraguaylle (2-2) painavat keskustelua." },
+      { source:"AS Colombia", lang:"espanja", note:"Jamesin paluun jälkeen 'voiko 34-vuotias yhä nostaa joukkueen' -kysymys median pääagenda." },
+      { source:"Win Sports", lang:"espanja", note:"Lähetysoikeudet ja päivittäiset ennakot. Luis Díazin kunto isoin huoli." }
+    ],
+    sources:"El Tiempo, El Espectador, La FM, AS Colombia, Win Sports"
+  },
+  {
+    flag:"🇪🇨", name:"Ecuador", conf:"CONMEBOL", lohko:"E",
+    lohkoLisa:"Saksa, Curaçao, Norsunluurannikko",
+    period:"Toukokuun alku 2026",
+    snippet:"Beccacece kuuluu \"Santa Fen valmentajapesueen\". Caicedo (Chelsea), Hincapié (Leverkusen), Estupiñán (Milan), Valencia (kapteeni). Karsinnoissa muistettava 1-0 voitto Kolumbiasta.",
+    tone:"Luottavainen mutta varovainen. Beccacecen taktinen organisointi on saanut mediassa kiitosta.",
+    keyMatch:"Lohkoon nähden vahvinta vastustajaa eli Saksaa vastaan 25.6.",
+    keyPlayers:"Moisés Caicedo (Chelsea), Piero Hincapié (Bayer Leverkusen), Pervis Estupiñán (Milan), Enner Valencia (kapteeni)",
+    mediaTalk:[
+      { source:"El Universo", lang:"espanja", note:"Vahvan karsintakauden (kolmas CONMEBOLissa) ympärillä rakentuva narratiivi. Beccacecen taktinen organisointi 'mallikasta'." },
+      { source:"El Comercio", lang:"espanja", note:"Caicedon, Hincapién ja Estupiñánin profiilit. Estupiñán Fox Sportsin top-100:ssa sijalla 100." },
+      { source:"Studio Fútbol", lang:"espanja", note:"Beccacecen kuuluminen 'Santa Fen valmentajapesueeseen' (Argentiinan valmentajaverkostoon)." },
+      { source:"Ecuagol", lang:"espanja", note:"Karsintojen muistettavin: 1-0 voitto Kolumbiasta marraskuussa 2024." }
+    ],
+    sources:"El Universo, El Comercio, Studio Fútbol, Ecuagol"
+  },
+  {
+    flag:"🇵🇾", name:"Paraguay", conf:"CONMEBOL", lohko:"D",
+    lohkoLisa:"Yhdysvallat, Australia, Turkki",
+    period:"Toukokuun alku 2026",
+    snippet:"Alfaro palauttaa Paraguayn MM-kisoihin — sama mies, joka vei Ecuadorin Qatariin. Almirón kapteeni. Avausottelu USA:ta vastaan 12.6. Los Angelesissa.",
+    tone:"Toiveikas mutta painostuksessa. Avausottelu isäntämaan kanssa on iso lähtöpaikka.",
+    keyMatch:"Avausottelu Yhdysvaltoja vastaan Los Angelesissa 12.6. (turnauksen kakkosottelu).",
+    keyPlayers:"Miguel Almirón (kapteeni, Atlanta United), Antony Silva (maalivahti), Diego Gómez",
+    mediaTalk:[
+      { source:"ABC Color", lang:"espanja", note:"Käsitteli karsintapelien jälkeistä 'itsevarmuuden uudelleenrakennusta' Alfaron alaisuudessa." },
+      { source:"Última Hora", lang:"espanja", note:"Bolivia-tasapelistä (4 020 metrin korkeudessa) kritiikkiä, mutta Paraguay säilytti viidennen paikkansa." },
+      { source:"Versus", lang:"espanja", note:"Almirón kapteenina, Atlanta United -taustalta. USA-ottelu nähdään 'mahdollisuutena tehdä iso ulostulo'." },
+      { source:"Tigo Sports", lang:"espanja", note:"Lähetysennakot ja avausottelun rakenteellinen analyysi: 12.6. Los Angeles, valtava paine." }
+    ],
+    sources:"ABC Color, Última Hora, Versus, Tigo Sports"
+  },
+  {
+    flag:"🇺🇾", name:"Uruguay", conf:"CONMEBOL", lohko:"H",
+    lohkoLisa:"Espanja, Kap Verde, Saudi-Arabia",
+    period:"Toukokuun alku 2026",
+    snippet:"Bielsa kolmannen kerran MM-kisoissa päävalmentajana. Karsintojen toinen sija (20 p / 36). Valverde, Núñez, Ugarte, Araújo avainpelaajat. Vanha kaarti (Suárez, Cavani) taakse.",
+    tone:"Bielsa-fanaattinen mutta hieman jaettu. Vanha kaarti on jäänyt taakse, ja kaikki eivät vielä luota nuoreen sukupolveen.",
+    keyMatch:"Avausottelu Saudi-Arabiaa vastaan Miamissa 15.6.",
+    keyPlayers:"Federico Valverde, Darwin Núñez, Manuel Ugarte, Maximiliano Araújo",
+    mediaTalk:[
+      { source:"El País Uruguay", lang:"espanja", note:"Pääjuttu Bielsan radikaalista sukupolvenvaihdoksesta. Karsintojen toinen sija (20 p / 36) vahva pohja." },
+      { source:"Ovación", lang:"espanja", note:"Filosofinen analyysi: Bielsan 'energinen ja hyökkäyspainotteinen' tyyli. 'Loco aina arvaamaton.'" },
+      { source:"Tenfield", lang:"espanja", note:"Pelaajaprofiilit: Valverde, Núñez, Ugarte, Araújo. Vanhan kaartin (Suárez, Cavani) eläköityminen taustalla." },
+      { source:"El Observador", lang:"espanja", note:"Käsitteli jaettua mielialaa — kaikki eivät vielä luota nuoreen sukupolveen kantamaan turnausta." }
+    ],
+    sources:"El País Uruguay, Ovación, Tenfield, El Observador"
+  },
+
+  // ============ CAF ============
+  {
+    flag:"🇲🇦", name:"Marokko", conf:"CAF", lohko:"C",
+    lohkoLisa:"Brasilia, Haiti, Skotlanti",
+    period:"9.–12.5.2026",
+    snippet:"Hakimi ja entinen valmentaja Regragui illallisilla Pariisissa. Hakimi The Athleticin top 100:n sijalla 22 (paras afrikkalainen), Brahim Díaz sijalla 83.",
+    tone:"Erittäin korkea itsetunto. Marokon media puhuu turnauksesta lähes kuin saavutettuna saavutuksena, vaikka tasolla on suuria odotuksia.",
+    keyMatch:"Avausottelu Brasiliaa vastaan New Jerseyssä 13.6.",
+    keyPlayers:"Achraf Hakimi (top 100 sija 22, paras afrikkalainen), Brahim Díaz (CAN 2025 -maalikuningas), Hakim Ziyech, Youssef En-Nesyri",
+    mediaTalk:[
+      { source:"Hespress", lang:"arabia / ranska", note:"Pääuutinen Hakimin ja Regraguin Pariisin tapaamisesta — 'henkilökohtainen yhteys säilyy' vaikka Regragui ei enää ole valmentaja. Uusi valmentaja Mohamed Ouahbi." },
+      { source:"Le360", lang:"ranska", note:"Käsitteli The Athleticin top 100 -listaa: Hakimi sija 22, Brahim Díaz sija 83. Díaz juuri voittanut CAN 2025 -maalikuninkuuden." },
+      { source:"MAP (Maghreb Arabe Presse)", lang:"arabia / ranska", note:"Virallisempi sävy: Marokko Qatar 2022 -välierien jälkeen 'Afrikan vahvin ehdokas' MM-kisoihin." }
+    ],
+    sources:"Hespress, Le360, MAP"
+  },
+  {
+    flag:"🇪🇬", name:"Egypti", conf:"CAF", lohko:"G",
+    lohkoLisa:"Belgia, Iran, Uusi-Seelanti",
+    period:"Toukokuun alku 2026",
+    snippet:"Lopullinen ryhmä 29.5. — yksi viimeisistä turnauksen joukkueista. Hossam Hassan päävalmentaja. Salah rikkoi 250 maalin rajan Liverpoolilla. Marmoush (Man City) kakkoskärki.",
+    tone:"Salah-keskeinen ja toiveikas. Kaikki riippuu hänestä — sekä terveydestä että huipusta.",
+    keyMatch:"Lohko G:n iso testi Belgiaa vastaan — odotetaan, että ottelu on lyötävissä.",
+    keyPlayers:"Mohamed Salah (250 Liverpool-maalia rikki), Omar Marmoush (Manchester City), Mohamed Elneny",
+    mediaTalk:[
+      { source:"Al-Ahram", lang:"arabia", note:"Vahvan virallisen sävyn pääuutinen: Salahin 250 maalin rajan rikkominen Liverpoolissa Aston Villa -voitossa." },
+      { source:"KingFut", lang:"englanti", note:"Englanninkielinen Egypti-kattaja. Lopullinen ryhmä 29.5. — yksi viimeisistä turnauksen joukkueista." },
+      { source:"FilGoal", lang:"arabia", note:"Marmoushin (Manchester City) roolia toisena kärkihyökkääjänä. Egypti uskoo Belgia 'lyötävissä'." },
+      { source:"Youm7", lang:"arabia", note:"Käsitteli Hossam Hassania päävalmentajana — Egyptin kaikkien aikojen toiseksi paras maalintekijä." }
+    ],
+    sources:"Al-Ahram, KingFut, FilGoal, Youm7"
+  },
+  {
+    flag:"🇩🇿", name:"Algeria", conf:"CAF", lohko:"J",
+    lohkoLisa:"Argentiina, Itävalta, Jordania",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu MM-kisoihin 12 vuoden tauon jälkeen Petkovićin alaisuudessa. Mahrez (34, Al-Ahli) yhä ratkaiseva. Bennacer ja Aouar keskikentän selkäranka.",
+    tone:"Realistinen toiveikkuus. Algerian medioissa on enemmän puhetta CAN-otteluista ja MM-paikan saavuttamisesta sinänsä kuin suurista odotuksista.",
+    keyMatch:"Avausottelu Argentiinaa vastaan Kansas Cityssä 16.6.",
+    keyPlayers:"Riyad Mahrez (34, Al-Ahli SC), Ismaël Bennacer (AC Milan), Houssem Aouar",
+    mediaTalk:[
+      { source:"El Watan", lang:"ranska", note:"Pääjuttu paluusta 12 vuoden tauon jälkeen. Petkovićin valmennustyyli korostetusti esillä." },
+      { source:"DZfoot", lang:"ranska", note:"Karsintojen vakuuttava voitto CAF-lohkossa. Mahrezin rooli 34-vuotiaana 'edelleen ratkaiseva'." },
+      { source:"Liberté", lang:"ranska", note:"Bennacerin ja Aouarin keskikenttäkemia korostuu. Lohkoanalyysi: Itävalta ja Jordania 'lyötävissä'." },
+      { source:"Le Buteur", lang:"ranska / arabia", note:"Käsitteli mediakeskustelun painopistettä — CAN-otteluja ja MM-paikan saavuttamista, ei suuria turnausodotuksia." }
+    ],
+    sources:"El Watan, DZfoot, Liberté, Le Buteur"
+  },
+  {
+    flag:"🇬🇭", name:"Ghana", conf:"CAF", lohko:"L",
+    lohkoLisa:"Englanti, Kroatia, Panama",
+    period:"Toukokuun alku 2026",
+    snippet:"Kudus (West Ham) \"musta tähti\". Otto Addo valmentaa — nuoria pelaajia (Semenyo, Brighton) yhdistetään veteraaneihin (Salisu, André Ayew). Avaus Englantia vastaan 15.6.",
+    tone:"Innokas ja kunnianhimoinen. Englanti-ottelu nähdään mahdollisuutena, ei pelkona — Tuchel ei pelota.",
+    keyMatch:"Avausottelu Englantia vastaan Bostonissa 15.6.",
+    keyPlayers:"Mohammed Kudus (West Ham), Antoine Semenyo (Brighton), Mohammed Salisu, André Ayew",
+    mediaTalk:[
+      { source:"Ghanasoccernet", lang:"englanti", note:"Pääjuttu Kudusin asemasta 'mustana tähtenä'. Hänen vastuunsa johtaa joukkuetta Englanti-avauksessa." },
+      { source:"Citi Sports", lang:"englanti", note:"Englanti-ottelu 'koko Ghanan ja diasporan suuri tapahtuma'. Lopullinen ryhmä 21.5." },
+      { source:"MyJoyOnline", lang:"englanti", note:"Käsitteli Otto Addon valmennusvalintoja: nuoria (Semenyo) yhdistetään veteraaneihin (Ayew, Salisu)." },
+      { source:"Joy Sports", lang:"englanti", note:"Karsintojen Comorit-voitto lokakuussa esitellään pohjana avausotteluun." }
+    ],
+    sources:"Ghanasoccernet, Citi Sports, MyJoyOnline, Joy Sports"
+  },
+  {
+    flag:"🇨🇮", name:"Norsunluurannikko", conf:"CAF", lohko:"E",
+    lohkoLisa:"Saksa, Curaçao, Ecuador",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu Brasilia 2014:n jälkeen. CAN 2023 -voiton tunnepohja yhä vahva. Haller (Dortmund), Kessié (Al-Ahli), Adingra (Brighton). Faé jatkaa valmentajana.",
+    tone:"Itsevarma ja optimistinen. CAN 2023 -voitto on käytännössä elossa joka uutisessa.",
+    keyMatch:"Avausottelu Saksaa vastaan BMO Fieldillä 20.6.",
+    keyPlayers:"Sébastien Haller (Borussia Dortmund), Franck Kessié (Al-Ahli), Simon Adingra (Brighton)",
+    mediaTalk:[
+      { source:"Abidjan.net", lang:"ranska", note:"CAN 2023 -voitto edelleen kantava narratiivi. Emerse Faé jatkaa valmentajana CAN-voiton jälkeen." },
+      { source:"RTI (yleisradio)", lang:"ranska", note:"Saksa-avaus 'mielenkiintoisimpia lohko-otteluja' — molemmat tunnettuja taktisesta organisaatiosta." },
+      { source:"Fratmat", lang:"ranska", note:"Hallerin, Kessién ja Adingran avainprofiilit. Optimistinen ennakko." }
+    ],
+    sources:"Abidjan.net, RTI, Fratmat"
+  },
+  {
+    flag:"🇹🇳", name:"Tunisia", conf:"CAF", lohko:"F",
+    lohkoLisa:"Hollanti, Japani, Ruotsi",
+    period:"Toukokuun alku 2026",
+    snippet:"Seitsemännet MM-kisat, kolmas peräkkäinen. Tavoite: ulos lohkovaiheesta ensimmäistä kertaa. Trabelsi päävalmentaja. Mejbri (Burnley), Skhiri, Khazri (kapteeni).",
+    tone:"Realistinen mutta toiveikas. Qatar 2022 Ranska-voiton kaltainen toistaminen olisi ihme.",
+    keyMatch:"Avausottelu Ruotsia vastaan Monterreyssa 14.6.",
+    keyPlayers:"Hannibal Mejbri (Burnley), Ellyes Skhiri (Frankfurt), Wahbi Khazri (kapteeni)",
+    mediaTalk:[
+      { source:"La Presse", lang:"ranska", note:"Käsitteli seitsemättä MM-osallistumista — kolmas peräkkäinen. Tavoite ulos lohkovaiheesta ensimmäistä kertaa." },
+      { source:"Mosaïque FM", lang:"ranska / arabia", note:"Karsinnoissa Tunisia jäi pisteittä vain kerran. Trabelsin valmennusvalinnat." },
+      { source:"Tunisie Foot", lang:"ranska", note:"Mejbrin (Burnley) ja Skhirin (Frankfurt) profiilit avainpelaajina. Lopullinen ryhmä 15.5." }
+    ],
+    sources:"La Presse, Mosaïque FM, Tunisie Foot"
+  },
+  {
+    flag:"🇸🇳", name:"Senegal", conf:"CAF", lohko:"I",
+    lohkoLisa:"Ranska, Norja, Irak",
+    period:"Toukokuun alku 2026",
+    snippet:"Avaus Ranskaa vastaan 16.6. New Yorkissa — kohutta vastakohta entisen siirtomaaisännän kanssa. Cissé lähti, Pape Thiaw uusi valmentaja. Mané (33) yhä koossa pitävä voima.",
+    tone:"Sekoitus ylpeyttä ja epäilystä. Cissén lähtö pakotti rakentamaan uutta identiteettiä — Ranska-ottelu antaa raakaa testiä.",
+    keyMatch:"Avausottelu Ranskaa vastaan New Yorkissa 16.6.",
+    keyPlayers:"Sadio Mané (33), Édouard Mendy (Al-Ahli), Kalidou Koulibaly, Idrissa Gana Gueye",
+    mediaTalk:[
+      { source:"Wiwsport", lang:"ranska", note:"Pääuutinen Cissén lähdöstä ja Pape Thiawn ottamasta paikasta — 'uuden identiteetin rakentaminen' alkaa Ranska-vastapuolelta." },
+      { source:"Stades", lang:"ranska", note:"Manén roolia 33-vuotiaana — 'koossa pitävä voima, vaikka rooli tarkasteltava'." },
+      { source:"Seneweb", lang:"ranska", note:"Mendyn, Koulibalyn ja Gueyen avainprofiilit. Tukikohta Pariisissa ennen siirtymistä USA:han." },
+      { source:"Le Soleil", lang:"ranska", note:"Pohti Ranska-avauksen symboliikkaa entisen siirtomaaisännän vastapuolelta." }
+    ],
+    sources:"Wiwsport, Stades, Seneweb, Le Soleil"
+  },
+  {
+    flag:"🇿🇦", name:"Etelä-Afrikka", conf:"CAF", lohko:"A",
+    lohkoLisa:"Meksiko, Etelä-Korea, Tšekki",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu MM-kisoihin 16 vuoden jälkeen. Avaa koko turnauksen Meksikoa vastaan 11.6. Estadio Aztecan 100 000 katsojan edessä — symbolinen toisto 2010:stä. Broos valmentajana.",
+    tone:"Liikuttunut ja toiveikas. \"Vuoden 2010 toisto\" on emotionaalinen ja kerää kansakuntaa yhteen.",
+    keyMatch:"Avaa koko MM-kisat Meksikoa vastaan Estadio Aztecalla 11.6.",
+    keyPlayers:"Themba Zwane (Mamelodi Sundowns), Teboho Mokoena (Sundowns)",
+    mediaTalk:[
+      { source:"SuperSport", lang:"englanti", note:"Pääuutinen paluusta 16 vuoden tauon jälkeen. Aztecan 'toisto' 2010-avauksesta emotionaalinen pohja." },
+      { source:"Kickoff", lang:"englanti", note:"Hugo Broosin (belgialaisvalmentaja, CAN 2017 Kamerunin kanssa) tausta ja taktinen tyyli." },
+      { source:"News24 Sport", lang:"englanti", note:"Karsintojen pistemenetys (Lesotho 2-0 → 3-0 forfeit pelaajan ehtoa rikkoneen takia), mutta selvisi silti Rwandasta 3-0." },
+      { source:"IOL Sport", lang:"englanti", note:"Themba Zwanen ja Teboho Mokoenan profiilit Sundownsin riveistä." }
+    ],
+    sources:"SuperSport, Kickoff, News24 Sport, IOL Sport"
+  },
+  {
+    flag:"🇨🇩", name:"Kongon DT", conf:"CAF", lohko:"K",
+    lohkoLisa:"Portugali, Uzbekistan, Kolumbia",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu 52 vuoden tauon jälkeen — viimeksi 1974 Zairena. Voitto Jamaikasta playoffeissa Mexicossa. Desabre (FR) valmentaa. Wissa, Bakambu, Mbemba avainpelaajat.",
+    tone:"Euforinen. Pelkkä paikka MM-kisoissa on jo voitto, ja Ronaldoa vastaan pelaaminen on tilaisuus.",
+    keyMatch:"Avausottelu Portugalia vastaan Houstonissa 17.6. — Ronaldo-ottelu.",
+    keyPlayers:"Yoane Wissa (Newcastle), Cédric Bakambu (Real Betis), Chancel Mbemba (Lille), Axel Tuanzebe",
+    mediaTalk:[
+      { source:"Radio Okapi", lang:"ranska", note:"YK-tausta-asemointi: pääuutinen historiallisesta paluusta 1974 jälkeen. Tuanzeben jatkoaikamaalit Jamaikaa vastaan." },
+      { source:"Mediacongo", lang:"ranska", note:"Wissan, Bakambun ja Mbemban profiilit. 'The Leopards' saanut Afrikan-kansojen tilanteessa runsaan tuen." },
+      { source:"7sur7.cd", lang:"ranska", note:"Ronaldo-avauksen symboliikkaa — 'tilaisuus' eikä uhka." }
+    ],
+    sources:"Radio Okapi, Mediacongo, 7sur7.cd"
+  },
+  {
+    flag:"🇨🇻", name:"Kap Verde", conf:"CAF", lohko:"H",
+    lohkoLisa:"Espanja, Saudi-Arabia, Uruguay",
+    period:"Toukokuun alku 2026",
+    snippet:"525 000 asukasta, kolmanneksi pienin MM-kansa. Diaspora-aspekti keskeinen: Lopes rekrytoitiin LinkedInissä, Moreira (Columbus), Rodrigues, Arcanjo. CNN-haastattelu Bubistaa Atlantassa.",
+    tone:"Iloinen ja innostunut. Pelkkä paikka kisoissa on saavutus, ja media kantaa diaspora-tarinoita sydämellään.",
+    keyMatch:"Avausottelu Espanjaa vastaan Atlantassa 15.6. — David ja Goliat.",
+    keyPlayers:"Roberto Lopes (Shamrock Rovers, syntynyt Irlannissa), Steven Moreira (Columbus Crew), Garry Rodrigues, Telmo Arcanjo",
+    mediaTalk:[
+      { source:"Expresso das Ilhas", lang:"portugali", note:"Pääjuttu LinkedInin kautta rekrytoidusta Robertto Lopesista. Diaspora-pelaajien tausta keskiössä." },
+      { source:"A Nação", lang:"portugali", note:"Bubistan kierrokset Atlantin saarilla — valmentaja 'henkilökohtaisesti kiertämässä saaria'." },
+      { source:"RTC (yleisradio)", lang:"portugali", note:"Käsitteli koko maan riemua ja sitä, että 525 000 asukasta on kolmanneksi pienin MM-kansa (vain Curaçao ja Islanti pienempiä)." },
+      { source:"CNN (kv-kattaja)", lang:"englanti", note:"Haastatteli Bubistaa Atlantan Mercedes-Benz Stadiumin kierroksella. Diaspora-tarinat keskiössä." }
+    ],
+    sources:"Expresso das Ilhas, A Nação, RTC, CNN"
+  },
+
+  // ============ AFC ============
+  {
+    flag:"🇮🇷", name:"Iran", conf:"AFC", lohko:"G",
+    lohkoLisa:"Belgia, Egypti, Uusi-Seelanti",
+    period:"10.–12.5.2026",
+    snippet:"FFIRI:n presidentti listasi 10 ehtoa osallistumiselle (CNN/AP). Infantino vakuuttaa: Iran pelaa. USA–Iran 16-osafinaali Dallasissa 3.7. mahdollinen. Taremin terveys urheilullinen huoli.",
+    tone:"Poliittisesti raskas, urheilullisesti määrätietoinen. Iranin media painottaa kansallista ylpeyttä, mutta logistiikan epävarmuus on jokapäiväistä.",
+    keyMatch:"Avausottelu Uutta Seelantia vastaan Los Angelesissa 15.6.",
+    keyPlayers:"Mehdi Taremi (Olympiacos, terveys epävarma), Sardar Azmoun (Shabab Al-Ahli), Ali Gholizadeh",
+    mediaTalk:[
+      { source:"Tasnim", lang:"persia", note:"FFIRI:n presidentti Mehdi Tajin haastattelu maan TV:lle: 10 ehtoa Iranin osallistumiselle. Vaatimukset koskevat erityisesti viisumikäytäntöjä USA:ssa." },
+      { source:"ISNA", lang:"persia", note:"Pohdintaa USA–Iran-mahdollisesta 16-osafinaalista Dallasissa 3.7. 'Poliittisesti latautunut mahdollisuus.'" },
+      { source:"Varzesh3", lang:"persia", note:"Urheilullinen pääuutinen: Taremin (Olympiacos) terveys 'suurin urheilullinen huoli'. Azmoun ja Gholizadeh tukijoita." },
+      { source:"AP / CNN (kv-kattajat)", lang:"englanti", note:"Raportoivat, että Yhdysvaltain ja Iranin tämän kevään kireät suhteet ovat tehneet logistiikasta poikkeuksellisen monimutkaista. Infantino vakuuttanut: Iran pelaa." }
+    ],
+    sources:"Tasnim, ISNA, Varzesh3, AP, CNN"
+  },
+  {
+    flag:"🇮🇶", name:"Irak", conf:"AFC", lohko:"I",
+    lohkoLisa:"Ranska, Senegal, Norja",
+    period:"Maaliskuu–toukokuu 2026",
+    snippet:"Voitto playoff-finaalissa Bolivia/Suriname-voittajaa vastaan. Paluu 1986 jälkeen. Graham Arnold valmentaa, on pyytänyt FIFA:lta lykkäystä viisumi- ja ilmatilaongelmien takia.",
+    tone:"Kärsivällinen ja realistinen. Avajaisottelu Ranskaa vastaan Philadelphiassa 22.6. on suuri urheilullinen tähtihetki, vaikka logistiikka on jättivaikeaa.",
+    keyMatch:"Avausottelu Senegalia vastaan Torontossa 16.6., toinen ottelu Ranskaa vastaan Philadelphiassa 22.6.",
+    keyPlayers:"(Päävalmentaja Graham Arnold — Australia Qatar 2022)",
+    mediaTalk:[
+      { source:"Al-Sumaria", lang:"arabia", note:"Pääuutinen playoff-finaalin voitosta Guadalupessa. Paluu MM-kisoihin 1986 jälkeen." },
+      { source:"Kooora Iraq", lang:"arabia", note:"Logistiikan ongelmat keskiössä: kotimaan ilmatila suljettu, viisumihaut Meksikon edustustoihin haastavia." },
+      { source:"ESPN (kv-kattaja)", lang:"englanti", note:"Arnoldin sitaatti: jos Iran vetäytyisi ja Irak saisi lisäaikaa, valmistautuminen olisi sujuvampaa. Houstonin harjoitusleiri jouduttiin perumaan." }
+    ],
+    sources:"Al-Sumaria, Kooora Iraq, ESPN"
+  },
+  {
+    flag:"🇸🇦", name:"Saudi-Arabia", conf:"AFC", lohko:"H",
+    lohkoLisa:"Espanja, Kap Verde, Uruguay",
+    period:"Toukokuun alku 2026",
+    snippet:"Renard palannut päävalmentajaksi — Qatar 2022 -voitto Argentiinasta. Al-Dawsari (Al-Hilal), Al-Faraj, Al-Buraikan avainpelaajat. Avausottelu Uruguayta vastaan 15.6.",
+    tone:"Itsevarma maltillisesti. Argentiina-voiton muisto antaa median puheelle erityistä energiaa.",
+    keyMatch:"Avausottelu Uruguayta vastaan Miamissa 15.6.",
+    keyPlayers:"Salem Al-Dawsari (Al-Hilal), Salman Al-Faraj, Firas Al-Buraikan",
+    mediaTalk:[
+      { source:"Arriyadiyah", lang:"arabia", note:"Pääuutinen Renardin paluusta. 2-1 voitto Argentiinasta Qatar 2022:n avauspelissä toistuva viittauspiste." },
+      { source:"Asharq Al-Awsat", lang:"arabia", note:"Saudi Pro Leaguen kausien tuoma 'kansainvälinen kokemus' pohjana MM-suunnitelmille." },
+      { source:"Okaz", lang:"arabia", note:"Al-Dawsarin, Al-Farajin ja Al-Buraikanin profiilit. Avausottelu Uruguayta vastaan Miamissa 15.6." }
+    ],
+    sources:"Arriyadiyah, Asharq Al-Awsat, Okaz"
+  },
+  {
+    flag:"🇯🇴", name:"Jordania", conf:"AFC", lohko:"J",
+    lohkoLisa:"Argentiina, Algeria, Itävalta",
+    period:"Toukokuun alku 2026",
+    snippet:"MM-kisojen debyytti. Pelaajat pääosin Lähi-idän liigoista. Kapteeni Al-Taamari pelaa Rennesissä. Jamal Sellami valmentaja. Aasian cupin finaali 2023 historiallinen pohja.",
+    tone:"Iloisesti yllättynyt. Pelkkä paikka MM-kisoissa on saavutus, ja Messi-ottelu on koko Jordanian unelma.",
+    keyMatch:"Avausottelu Itävaltaa vastaan Santa Clarassa 16.6.; Argentiina-ottelu 27.6. — Messi-vastaisuus.",
+    keyPlayers:"Musa Al-Taamari (Rennes — ainoa Eurooppa-pelaaja)",
+    mediaTalk:[
+      { source:"Petra News", lang:"arabia", note:"Virallisin sävy: pääjuttu debyytin merkityksestä Jordanialle." },
+      { source:"Roya News", lang:"arabia", note:"Sellamin valmennusta käsitteleviä syvätaustoja. Aasian cupin finaali 2023 (häviö Qatarille) pohja kasvulle." },
+      { source:"Al Ghad", lang:"arabia", note:"Käsitteli pelaajakirjon poikkeuksellisuutta — pääosin Lähi-idän liigoista. Al-Taamari Rennesin riveissä ainoa Eurooppa-pelaaja." },
+      { source:"ESPN (kv-kattaja)", lang:"englanti", note:"Debytanttisarjan osa: 'kuinka Jordania pääsi MM-kisoihin.' Messi-vastaisuus 27.6. iso teema." }
+    ],
+    sources:"Petra News, Roya News, Al Ghad, ESPN"
+  },
+  {
+    flag:"🇶🇦", name:"Qatar", conf:"AFC", lohko:"B",
+    lohkoLisa:"Kanada, Bosnia, Sveitsi",
+    period:"Toukokuun alku 2026",
+    snippet:"Ensimmäistä kertaa urheilullisesti MM-kisoissa (2022 oli isäntämaa). Afif (Al-Sadd) Asian Cup 2023 -voittaja. Al-Haydos, Al-Rawi kokeneita ratkaisijoita.",
+    tone:"Vakavasti otettava ja kunnianhimoinen. Qatarin urheiluapparaatti on rakennettu, ja MM-kisat ovat ensimmäinen iso urheilullinen testi.",
+    keyMatch:"Avausottelu Sveitsiä vastaan Santa Clarassa 13.6.",
+    keyPlayers:"Akram Afif (Al-Sadd, Asian Cup 2023 -voittaja), Almoez Ali, Hassan Al-Haydos, Bassam Al-Rawi",
+    mediaTalk:[
+      { source:"Al Sharq", lang:"arabia", note:"Pääuutinen ensimmäisestä urheilullisesta MM-osallistumisesta — 2022 isäntämaan oikeudella." },
+      { source:"Al Raya", lang:"arabia", note:"Afifin asema Aasian cupin voittajana ja avainpelaajana keskiössä." },
+      { source:"Qatar Football Association", lang:"arabia / englanti", note:"Virallinen kommunikointi: Lohko B (Kanada, Bosnia, Sveitsi) tarjoaa 'selkeitä mahdollisuuksia'." }
+    ],
+    sources:"Al Sharq, Al Raya, Qatar Football Association"
+  },
+  {
+    flag:"🇺🇿", name:"Uzbekistan", conf:"AFC", lohko:"K",
+    lohkoLisa:"Portugali, Kongo DT, Kolumbia",
+    period:"5.–12.5.2026",
+    snippet:"MM-debyytti. Suuri kohu: Kapadze erotettiin, korvattiin Cannavarolla. 40 hengen esilista jo 5.5. Shomurodov (Roma), Fayzullaev (CSKA), Norchaev (Hercules).",
+    tone:"Innokas ja kunnianhimoinen. Cannavaron palkkaaminen jakaa mielipiteitä, mutta tuo myös huomiota.",
+    keyMatch:"Avausottelu Portugalia vastaan Houstonissa 17.6. — Ronaldoa vastaan.",
+    keyPlayers:"Eldor Shomurodov (AS Roma), Abbosbek Fayzullaev (CSKA Moskva), Khusan Norchaev (Hercules CF)",
+    mediaTalk:[
+      { source:"Championat.asia", lang:"uzbekki", note:"Pääuutinen 40 hengen esilistasta 5.5. — yksi turnauksen aikaisimmista." },
+      { source:"Sports.uz", lang:"uzbekki", note:"Cannavaron palkkaaminen 'jakaa mielipiteitä, mutta tuo huomiota' — kohu Kapadzen syksyisestä erotuksesta yhä taustalla." },
+      { source:"Daryo", lang:"uzbekki", note:"Shomurodovin, Fayzullaevin ja Norchaevin profiilit avainpelaajina." },
+      { source:"ESPN (kv-kattaja)", lang:"englanti", note:"Käsitteli Hollannin Uzbekistan-ystävyysottelua 8.6. New Yorkissa — pelataan ilman katsojia." }
+    ],
+    sources:"Championat.asia, Sports.uz, Daryo, ESPN"
+  },
+  {
+    flag:"🇯🇵", name:"Japani", conf:"AFC", lohko:"F",
+    lohkoLisa:"Hollanti, Ruotsi, Tunisia",
+    period:"9.–12.5.2026",
+    snippet:"Moriyasu julkistaa Samurai Blue -ryhmän 15.5. klo 14. Endo Wataru palaa nilkkaoperaatiosta. Mitoma FourFourTwon top 100:ssa. Avaus Hollantia vastaan Dallasissa 14.6.",
+    tone:"Aliarvoitellaan rauhallisesti. Maaliskuun voitot brittisaarella nostivat itsetuntoa, mutta Hollanti–avajaisottelu on raskas testi.",
+    keyMatch:"Avausottelu Hollantia vastaan Dallasissa 14.6.",
+    keyPlayers:"Endo Wataru (Liverpool, kapteeni, palaa nilkkaoperaatiosta), Mitoma Kaoru (Brighton), Suzuki Zayan (Parma)",
+    mediaTalk:[
+      { source:"Soccer King", lang:"japani", note:"Moriyasun ryhmäjulkistuksen aikataulu: pe 15.5. klo 14. Skotlanti- ja Englanti-voitot maaliskuussa (molemmat 1-0) selvittivät pohjarivit." },
+      { source:"Nikkan Sports", lang:"japani", note:"Pääjuttu Endo Watarun tilanteesta — Liverpool-valmentaja Slot puhui paluusta toukokuun lopussa. Endo on ollut Moriyasun 'vartija': 1980 minuuttia toisen kauden aikana." },
+      { source:"Sponichi", lang:"japani", note:"Tomiyasun (Ajax) epävarmuus: '100 % ei tarvitse', mutta Moriyasu haluaa odottaa." },
+      { source:"Gekisaka", lang:"japani", note:"Mitoma Kaoru (Brighton) FourFourTwon top 100 -listalla. Suzuki Zayan (Parma) maajoukkueen 'vartija'." }
+    ],
+    sources:"Soccer King, Nikkan Sports, Sponichi, Gekisaka"
+  },
+  {
+    flag:"🇰🇷", name:"Etelä-Korea", conf:"AFC", lohko:"A",
+    lohkoLisa:"Meksiko, Etelä-Afrikka, Tšekki",
+    period:"Toukokuun alku 2026",
+    snippet:"Son Heung-min (LAFC) kapteeni — Fox top 100:ssa 81. Kim Min-jae (Bayern) 98. Lee Kang-in (PSG) ja Lee Jae-sung (Mainz) keskikenttä. Sonin 54 maalia, Cha Bum-kunin ennätys 58 lähellä.",
+    tone:"Tasapainoinen ja luottavainen. Hong on rakentanut järjestelmällisen joukkueen — korealainen media kantaa Sonin viimeistä MM-kisaa kunnioittavasti.",
+    keyMatch:"Avausottelu Tšekkiä vastaan Guadalajarassa 11.6. (turnauksen toinen ottelu).",
+    keyPlayers:"Son Heung-min (LAFC, 54 maajoukkuemaalia — Cha Bum-kunin 58 ennätys lähellä), Kim Min-jae (Bayern), Lee Kang-in (PSG), Lee Jae-sung (Mainz)",
+    mediaTalk:[
+      { source:"Sportalkorea", lang:"korea", note:"Sonin siirto LAFC:hen Tottenhamin jälkeen pohjana MM-kauden tarinalle. Fox Sportsin top 100 -listalla 81." },
+      { source:"Korea Times", lang:"englanti / korea", note:"Cha Bum-kunin ennätys 58 maajoukkuemaalista — Sonin 54 vain neljän maalin päässä. 'Sonin viimeinen MM-kisa' kunnioittavasti." },
+      { source:"Naver Sports", lang:"korea", note:"Hong Myung-bon valmennustyö 'järjestelmällinen'. Lee Kang-in (PSG) ja Lee Jae-sung (Mainz) keskikentän moottorit." },
+      { source:"Yonhap", lang:"korea / englanti", note:"Kim Min-jaen (Bayern) profiili — Fox top 100:n sijalla 98." }
+    ],
+    sources:"Sportalkorea, Korea Times, Naver Sports, Yonhap"
+  },
+  {
+    flag:"🇦🇺", name:"Australia", conf:"AFC", lohko:"D",
+    lohkoLisa:"Yhdysvallat, Paraguay, Turkki",
+    period:"5.–12.5.2026",
+    snippet:"Pre-camp Sarasotassa 5.5. alkaen. Popovic on päättänyt 70–80 % ryhmästä, odottaa Souttarin ja O'Neillin paranemista. Tukikohta Oakland 31.5. alkaen.",
+    tone:"Pragmaattinen ja toiveikas. Popovic on saanut median luottamuksen — Australian odotukset ovat realistisia mutta ei alhaisia.",
+    keyMatch:"Avausottelu Turkkia vastaan BC Placessa Vancouverissa 13.6.",
+    keyPlayers:"Mathew Ryan (kapteeni, maalivahti), Alessandro Circati, Nestory Irankunda (Watford)",
+    mediaTalk:[
+      { source:"SBS Football", lang:"englanti", note:"Pääjuttu pre-campin alkamisesta Sarasotassa 5.5. Popovic päättänyt 70–80 % ryhmästä, odottaa Souttarin ja O'Neillin paranemista." },
+      { source:"Football Australia", lang:"englanti", note:"Tukikohta vahvistettiin Oaklandiin (Alameda, San Franciscon lahtialueella) 31.5. alkaen." },
+      { source:"ABC Sport", lang:"englanti", note:"Ystävyysottelut: Meksiko 30.5. Rose Bowlissa Pasadenassa, Sveitsi 6.6. San Diegossa." },
+      { source:"SEN (radio)", lang:"englanti", note:"Popovicin saamat 'realistiset mutta ei alhaiset' odotukset median puheessa." }
+    ],
+    sources:"SBS Football, Football Australia, ABC Sport, SEN"
+  },
+
+  // ============ CONCACAF muut ============
+  {
+    flag:"🇭🇹", name:"Haiti", conf:"CONCACAF", lohko:"C",
+    lohkoLisa:"Brasilia, Marokko, Skotlanti",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu 1974 jälkeen — toinen kerta historiassa. Migné valmentaa. Port-au-Princen gangiväkivalta tekee valmistautumisesta erittäin haastavaa. Leirit USA:ssa ja Dominikaanisessa tasavallassa.",
+    tone:"Liikuttava. Maa elää syvää kriisiä, mutta MM-kisat antavat hetken hengittää.",
+    keyMatch:"Avausottelu Skotlantia vastaan Foxborossa 14.6.",
+    keyPlayers:"Duckens Nazon (kapteeni), Frantzdy Pierrot, Jean-Eudes Maurice",
+    mediaTalk:[
+      { source:"Le Nouvelliste", lang:"ranska", note:"Pääjuttu Mignén valmennustyöstä ja siitä, miten maan tilanne tekee valmistautumisesta erittäin haastavaa." },
+      { source:"Loop Haiti", lang:"ranska / englanti", note:"Käsitteli valmennusleirien sijoittamista USA:han ja Dominikaaniseen tasavaltaan." },
+      { source:"AlterPresse", lang:"ranska", note:"Sosiaalinen näkökulma: maa elää 'syvää kriisiä, mutta MM-kisat antavat hetken hengittää'." }
+    ],
+    sources:"Le Nouvelliste, Loop Haiti, AlterPresse"
+  },
+  {
+    flag:"🇵🇦", name:"Panama", conf:"CONCACAF", lohko:"L",
+    lohkoLisa:"Englanti, Kroatia, Ghana",
+    period:"Toukokuun alku 2026",
+    snippet:"Toiset MM-kisat (2018 ensimmäiset). Christiansen valmentaa. Vuoden 2025 viimeisissä 12 ottelussa voittamaton; tammikuun Meksiko-tappio 14:n pelin jälkeen ensimmäinen.",
+    tone:"Realistinen mutta ylpeä. Päämedia keskittyy pelimäärien parantamiseen vuoden 2018 tappiosarjasta.",
+    keyMatch:"Avausottelu Kroatiaa vastaan Torontossa 16.6.; toinen ottelu Englantia vastaan 22.6. (kuten 2018-tappio).",
+    keyPlayers:"Aníbal Godoy (San Diego FC), Eric Davis, Adalberto Carrasquilla, Michael Murillo, Cecilio Waterman",
+    mediaTalk:[
+      { source:"La Prensa", lang:"espanja", note:"Pääjuttu Christianseniä koskien — vuoden 2025 viimeisissä 12 ottelussa voittamaton, tammikuun Meksiko-tappio ensimmäinen 14:ssa pelissä." },
+      { source:"La Estrella", lang:"espanja", note:"Godoyn (San Diego FC), Davisin, Carrasquillan ja Murillon profiilit. Watermanin asema avainresurssina." },
+      { source:"TVN Deportes", lang:"espanja", note:"Lähetysrakenne ja Englanti-otteluun (22.6.) liittyvä '2018-tappion' kierroksen kerronta." }
+    ],
+    sources:"La Prensa, La Estrella, TVN Deportes"
+  },
+  {
+    flag:"🇨🇼", name:"Curaçao", conf:"CONCACAF", lohko:"E",
+    lohkoLisa:"Saksa, Norsunluurannikko, Ecuador",
+    period:"Toukokuun alku 2026",
+    snippet:"Pienin valtio koskaan MM-kisoissa (~150 000). Advocaat erosi henkilökohtaisista syistä. Hyökkääjä Margaritha ESPN:lle: \"Häntä jää kaipaamaan.\" Pohja Hollannin liigan pelaajia.",
+    tone:"Onnellinen ja kiitollinen. Pieni saari elää historian suurinta hetkeään.",
+    keyMatch:"Avausottelu Saksaa vastaan Houstonissa 14.6.",
+    keyPlayers:"Jearl Margaritha (hyökkääjä, ESPN-sitaatti), pohja Hollannin liigan pelaajia",
+    mediaTalk:[
+      { source:"Antilliaans Dagblad", lang:"hollanti", note:"Pääjuttu paikan varmistumisesta marraskuun Jamaika-tasapelistä 2025. Pohja Hollannin liigan pelaajia, joilla Curaçaon juuret." },
+      { source:"Èxtra", lang:"papiamentu", note:"Paikallisin näkökulma — saaren riemu ja se, että ~150 000 asukasta on pienin valtio koskaan MM-kisoissa." },
+      { source:"ESPN (kv-kattaja)", lang:"englanti", note:"Jearl Margarithan sitaatti Advocaatin lähdön jälkeen: 'Häntä jää kaipaamaan.'" }
+    ],
+    sources:"Antilliaans Dagblad, Èxtra, ESPN"
+  },
+
+  // ============ OFC ============
+  {
+    flag:"🇳🇿", name:"Uusi-Seelanti", conf:"OFC", lohko:"G",
+    lohkoLisa:"Belgia, Egypti, Iran",
+    period:"Toukokuun alku 2026",
+    snippet:"Paluu Etelä-Afrikka 2010:n jälkeen. FIFA-rankingin alhaisin sijoitus turnauksessa (85). Wood (Forest, kapteeni), Stamenic, Singh, Cacace. Lopullinen ryhmä 14.5.",
+    tone:"Aliarvoitellaan vaatimattomasti. NZ Herald ja Stuff: \"olemme onnellisia, että pääsimme.\"",
+    keyMatch:"Avausottelu Irania vastaan Inglewoodissa 15.6.",
+    keyPlayers:"Chris Wood (Nottingham Forest, kapteeni), Marko Stamenic, Sarpreet Singh, Liberato Cacace",
+    mediaTalk:[
+      { source:"Stuff.co.nz", lang:"englanti", note:"Pääjuttu paluusta Etelä-Afrikka 2010:n jälkeen. Aliarvoittelevan vaatimaton sävy." },
+      { source:"RNZ Sport", lang:"englanti", note:"Yleisradio: lopullisen ryhmän julkistuspäivä 14.5. FIFA-rankingin alhaisin sijoitus turnauksessa (85)." },
+      { source:"NZ Herald", lang:"englanti", note:"Bazeleyn valmennustyö ja Woodin kapteenirooli Nottingham Forestin riveistä." }
+    ],
+    sources:"Stuff.co.nz, RNZ Sport, NZ Herald"
+  }
+];
+
+
+// ============ RENDER ============
+const grid = document.getElementById('grid');
+const countEl = document.getElementById('count');
+
+function renderCards() {
+  grid.innerHTML = countries.map((c, i) => `
+    <article class="card" data-conf="${c.conf}" data-lohko="${c.lohko}" data-index="${i}">
+      <div class="card-flag">${c.flag}</div>
+      <h3 class="card-country">${c.name}</h3>
+      <div class="card-meta">
+        <span class="conf">${c.conf}</span><span class="lohko">Lohko ${c.lohko}</span>
+      </div>
+      <p class="card-snippet">${c.snippet}</p>
+      <div class="card-sources">
+        <div class="card-sources-label">Lähteet</div>
+        ${c.sources}
+      </div>
+      <div class="card-cta">Avaa mediakohtaiset poiminnat</div>
+    </article>
+  `).join('');
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => openModal(parseInt(card.dataset.index)));
+  });
+}
+renderCards();
+
+const backdrop = document.getElementById('modal-backdrop');
+
+function openModal(idx) {
+  const c = countries[idx];
+  document.getElementById('modal-flag').textContent = c.flag;
+  document.getElementById('modal-country').textContent = c.name;
+  document.getElementById('modal-meta').innerHTML =
+    `<strong>${c.conf}</strong><span class="sep">·</span>Lohko ${c.lohko}<span class="sep">·</span>${c.lohkoLisa}<span class="sep">·</span>Ajanjakso: ${c.period}`;
+  document.getElementById('modal-snippet').textContent = c.snippet;
+  document.getElementById('modal-players').textContent = c.keyPlayers;
+  document.getElementById('modal-match').textContent = c.keyMatch;
+  document.getElementById('modal-tone').textContent = c.tone;
+
+  const mediaList = document.getElementById('modal-media');
+  mediaList.innerHTML = c.mediaTalk.map(m => `
+    <li class="media-item">
+      <div>
+        <span class="media-source">${m.source}</span>
+        <span class="media-lang">${m.lang}</span>
+      </div>
+      <div class="media-note">${m.note}</div>
+    </li>
+  `).join('');
+
+  document.getElementById('modal-sources-line').innerHTML =
+    `<strong>Käytetyt lähteet</strong>${c.sources}`;
+
+  backdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  backdrop.scrollTop = 0;
+}
+
+function closeModal() {
+  backdrop.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modal-close').addEventListener('click', closeModal);
+backdrop.addEventListener('click', (e) => {
+  if (e.target === backdrop) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+let activeConf = 'all';
+let activeLohko = 'all';
+let searchTerm = '';
+
+function applyFilters() {
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    const matchConf = activeConf === 'all' || card.dataset.conf === activeConf;
+    const matchLohko = activeLohko === 'all' || card.dataset.lohko === activeLohko;
+    const text = card.textContent.toLowerCase();
+    const matchSearch = !searchTerm || text.includes(searchTerm);
+    if (matchConf && matchLohko && matchSearch) {
+      card.classList.remove('hidden');
+      visible++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  countEl.textContent = visible;
+}
+
+document.querySelectorAll('#conf-filters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#conf-filters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeConf = btn.dataset.conf;
+    applyFilters();
+  });
+});
+
+document.querySelectorAll('#lohko-filters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#lohko-filters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeLohko = btn.dataset.lohko;
+    applyFilters();
+  });
+});
+
+document.getElementById('search').addEventListener('input', (e) => {
+  searchTerm = e.target.value.toLowerCase();
+  applyFilters();
+});
+</script>
+</body>
+</html>
