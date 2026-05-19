@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM2026 — Kanada & Bosnia-Hertsegovina | Paikallismediakatsaus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ede0;
+    --paper-2: #ebe2cf;
+    --ink: #1a1612;
+    --ink-2: #3a322a;
+    --ink-3: #6b5e4e;
+    --rule: #c8b89a;
+    --accent: #b8331c;          /* veristä signaalipunainen */
+    --accent-2: #2a3a5c;        /* tummasininen — molempien lippujen syvyys */
+    --maple: #c0392b;           /* Kanada */
+    --bosnia: #1d3a72;          /* Bosnia */
+    --gold: #b8902e;
+    --shadow: 0 1px 0 rgba(26,22,18,0.06), 0 12px 32px -16px rgba(26,22,18,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(184,144,46,0.05), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(42,58,92,0.06), transparent 40%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif;
+    font-feature-settings: "ss01", "ss02";
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ======== HEADER / MASTHEAD ======== */
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+    padding: 2rem 0 1.25rem;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .masthead::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -7px;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Inter Tight', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: var(--ink-3);
+    margin-bottom: 1.25rem;
+  }
+
+  .masthead-top .issue { font-weight: 600; color: var(--accent); }
+
+  .wordmark {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.6rem, 7vw, 5.2rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.4rem;
+    font-style: italic;
+  }
+
+  .wordmark .num {
+    font-style: normal;
+    font-weight: 300;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    max-width: 720px;
+    margin-top: 0.5rem;
+  }
+
+  /* ======== HERO ======== */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  @media (max-width: 880px) {
+    .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .hero .lede {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+
+  .hero .lede::first-letter {
+    font-family: 'Fraunces', serif;
+    font-size: 4.5rem;
+    line-height: 0.85;
+    float: left;
+    font-weight: 900;
+    margin: 0.15rem 0.6rem -0.2rem 0;
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .hero-meta {
+    border-left: 2px solid var(--ink);
+    padding-left: 1.5rem;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+  }
+
+  .hero-meta dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-meta dt {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    color: var(--ink-3);
+    font-weight: 600;
+    align-self: center;
+  }
+
+  .hero-meta dd {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .flag-row {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--rule);
+  }
+
+  .flag-row .vs {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--ink-3);
+  }
+
+  .flag {
+    width: 60px;
+    height: 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ======== SECTION DIVIDER ======== */
+  .section-mark {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0 2rem;
+    font-family: 'Inter Tight', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .section-mark .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--accent);
+    letter-spacing: 0;
+  }
+
+  .section-mark::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ======== COUNTRY HEADER ======== */
+  .country-header {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .country-flag {
+    width: 80px;
+    height: 53px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+
+  .country-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .country-header h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-3);
+    font-size: 0.6em;
+    display: block;
+    margin-top: 0.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .country-tag {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: white;
+    background: var(--ink);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  .country.canada .country-tag { background: var(--maple); }
+  .country.bosnia .country-tag { background: var(--bosnia); }
+
+  /* ======== ARTICLE LAYOUT ======== */
+  .article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .article-block {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px dashed var(--rule);
+  }
+
+  .article-block:last-child { border-bottom: none; }
+
+  @media (max-width: 760px) {
+    .article-block { grid-template-columns: 1fr; gap: 1rem; }
+  }
+
+  .block-meta {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-3);
+  }
+
+  .block-meta .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 700;
+    color: var(--accent-2);
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .country.canada .block-meta .kicker { color: var(--maple); }
+  .country.bosnia .block-meta .kicker { color: var(--bosnia); }
+
+  .block-meta .sources {
+    margin-top: 0.6rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink-3);
+  }
+
+  .block-meta .sources strong {
+    font-style: normal;
+    color: var(--ink-2);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.65rem;
+  }
+
+  .block-content h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+
+  .block-content h3 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .block-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+    margin-bottom: 1rem;
+  }
+
+  .block-content p:last-child { margin-bottom: 0; }
+
+  /* Pull quote */
+  .pullquote {
+    margin: 1.5rem 0;
+    padding: 1.2rem 0 1.2rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .pullquote cite {
+    display: block;
+    font-style: normal;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    margin-top: 0.6rem;
+    font-weight: 600;
+  }
+
+  /* News snippet */
+  .snippet {
+    background: rgba(0,0,0,0.025);
+    border-left: 2px solid var(--ink-3);
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+
+  .snippet .source-tag {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .snippet .source-tag .lang {
+    font-weight: 400;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+  }
+
+  .snippet .source-tag .date {
+    float: right;
+    color: var(--ink-3);
+    font-weight: 400;
+  }
+
+  .snippet p {
+    margin: 0 !important;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .snippet a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: var(--accent);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.78rem;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    font-weight: 500;
+  }
+
+  .snippet a:hover { color: var(--ink); }
+
+  /* Tone box */
+  .tone {
+    margin-top: 1.5rem;
+    padding: 1.1rem 1.4rem;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .tone strong {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+  }
+
+  .country.bosnia .tone strong { color: var(--bosnia); }
+
+  /* Stats strip */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 1.5rem 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+
+  @media (max-width: 680px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stat {
+    padding: 1rem 1.2rem;
+    border-right: 1px solid var(--rule);
+    font-family: 'Inter Tight', sans-serif;
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat .label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.65rem;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat .value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+
+  .stat .value .small {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-3);
+    margin-left: 0.2rem;
+  }
+
+  /* Synthesis */
+  .synthesis {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3rem 2.5rem;
+    margin: 4rem 0 2rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .synthesis::before {
+    content: "§";
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    font-family: 'Fraunces', serif;
+    font-size: 18rem;
+    color: rgba(255,255,255,0.04);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .synthesis .kicker {
+    font-family: 'Inter Tight', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .synthesis h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.015em;
+  }
+
+  .synthesis p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: rgba(244,237,224,0.92);
+    max-width: 60ch;
+    position: relative;
+  }
+
+  .synthesis p:last-child { margin-bottom: 0; }
+
+  .synthesis ol {
+    list-style: none;
+    counter-reset: synth;
+    margin-top: 1.5rem;
+  }
+
+  .synthesis ol li {
+    counter-increment: synth;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', serif;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: rgba(244,237,224,0.92);
+  }
+
+  .synthesis ol li::before {
+    content: counter(synth, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--gold);
+  }
+
+  .synthesis strong {
+    color: var(--paper);
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 5rem;
+    padding: 3rem 0;
+    border-top: 2px solid var(--ink);
+    text-align: center;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-3);
+  }
+
+  footer p { margin-bottom: 0.4rem; }
+  footer .signature {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-2);
+    margin-bottom: 0.8rem;
+  }
+
+  /* Method note */
+  .method-note {
+    margin: 2rem 0 3rem;
+    padding: 1.5rem 1.8rem;
+    border: 1px dashed var(--rule);
+    background: rgba(184,144,46,0.04);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    border-radius: 3px;
+  }
+
+  .method-note strong {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Crossroads — kohtaaminen-osio */
+  .crossroads {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--paper-2);
+    border-radius: 4px;
+    border-top: 3px solid var(--accent);
+  }
+
+  .crossroads h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+
+  .crossroads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    .crossroads-grid { grid-template-columns: 1fr; }
+  }
+
+  .crossroads-side h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid;
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  .crossroads-side.ca h4 { color: var(--maple); border-color: var(--maple); }
+  .crossroads-side.bih h4 { color: var(--bosnia); border-color: var(--bosnia); }
+
+  .crossroads-side p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  /* Anchor smooth pad */
+  .anchor-pad { padding-top: 1rem; margin-top: -1rem; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============= MASTHEAD ============= -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <span class="issue">Numero 02 — Tilannekuva</span>
+      <span>MM2026-uutisagentti · 19. toukokuuta 2026</span>
+      <span>Sarja: Ryhmä B</span>
+    </div>
+    <div class="wordmark">Toron<span class="num">to</span> avaa <span class="num">·</span> Zenica vie</div>
+    <p class="subtitle">Kanada ja Bosnia-Hertsegovina kohtaavat MM2026-avajaisottelussa BMO Fieldillä. Tämä on katsaus kummankin maan paikallismediaan, blogeihin ja jalkapallokeskusteluun noin kolme viikkoa ennen turnauksen avajaisia.</p>
+  </header>
+
+  <!-- ============= HERO ============= -->
+  <section class="hero">
+    <div>
+      <h1>Kaksi kotijoukkueta, <em>kaksi täysin eri tarinaa</em> — ja yksi paikka jatkoon, jota molemmat haluavat.</h1>
+      <p class="lede">Kanadalle MM-kisat ovat olleet kuusi vuotta loputonta odotusta, jonka huipennukseen on kuljettu Jesse Marschin nelivuotinen suunnitelma ja Donald Trumpin "51. osavaltio"-puheet kainalossa. Bosnialle MM-kisat ovat ihme — selektor Sergej Barbarezin, kapteenin Edin Džekon ja 18-vuotiaan Kerim Alajbegovićin yhteinen lahja kansakunnalle, joka oli alkanut uskoa, ettei tällaista enää tule. Kun nämä kaksi joukkuetta kohtaavat Torontossa 12. kesäkuuta, BMO Fieldille jää historiaa molempiin suuntiin.</p>
+    </div>
+    <aside class="hero-meta">
+      <dl>
+        <dt>Lohko</dt><dd>B</dd>
+        <dt>Avaus</dt><dd>12.6. Toronto, BMO Field</dd>
+        <dt>Muut</dt><dd>Sveitsi, Qatar</dd>
+        <dt>Ranking</dt><dd>Kanada 30 · BiH 53</dd>
+        <dt>Päiväys</dt><dd>19.5.2026</dd>
+      </dl>
+      <div class="flag-row">
+        <!-- Canadian flag -->
+        <svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="15" height="40" fill="#d52b1e"/>
+          <rect x="15" width="30" height="40" fill="#ffffff"/>
+          <rect x="45" width="15" height="40" fill="#d52b1e"/>
+          <path d="M30 10 L31.5 14 L35 13 L33 17 L37 19 L33 21 L35 25 L31.5 24 L30 28 L28.5 24 L25 25 L27 21 L23 19 L27 17 L25 13 L28.5 14 Z" fill="#d52b1e"/>
+        </svg>
+        <span class="vs">vs.</span>
+        <!-- Bosnia flag -->
+        <svg class="flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="60" height="40" fill="#002395"/>
+          <polygon points="14,2 30,38 14,38" fill="#fecb00"/>
+          <g fill="#ffffff">
+            <polygon points="14.5,2.5 13.3,5.7 16.5,5.7"/>
+            <polygon points="17,7 15.8,10.2 19,10.2"/>
+            <polygon points="19.5,11.5 18.3,14.7 21.5,14.7"/>
+            <polygon points="22,16 20.8,19.2 24,19.2"/>
+            <polygon points="24.5,20.5 23.3,23.7 26.5,23.7"/>
+            <polygon points="27,25 25.8,28.2 29,28.2"/>
+            <polygon points="29.5,29.5 28.3,32.7 31.5,32.7"/>
+            <polygon points="32,34 30.8,37.2 34,37.2"/>
+          </g>
+        </svg>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ============= METHOD NOTE ============= -->
+  <div class="method-note">
+    <strong>Menetelmästä, lyhyesti</strong>
+    Tämän koonnin pohjana on Kanadan englanninkielinen ja ranskankielinen päämedia (CBC Sports, Sportsnet, TSN, Canadian Soccer Daily, Sports Illustrated) sekä Bosnia-Hertsegovinan bosnian-, kroaatti- ja serbiankielinen päämedia (Klix.ba, Sportsport.ba, Avaz, Tacno.net, Radio Sarajevo, Index.hr — viimemainittu kroaattilainen, mutta tärkeä Bosnia-aiheissa). Mukana on myös pari kansainvälistä taktista lähdettä (RotoWire, MLSsoccer), jotka tuottavat ennakkoanalyysiä avausottelusta. Tuoreusikkuna: pääosin 5.–19.5.2026, joitakin maaliskuun keskeisiä juonteita mukana taustana. Lainaukset alle 15 sanaa, sisältö paraphrasoitu suomeksi.
+  </div>
+
+  <!-- ============= CANADA ============= -->
+  <div class="section-mark">
+    <span class="num">I.</span>
+    <span>Isäntämaa nro 1 — Kanadan media</span>
+  </div>
+
+  <section class="country canada">
+    <header class="country-header">
+      <svg class="country-flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+        <rect width="15" height="40" fill="#d52b1e"/>
+        <rect x="15" width="30" height="40" fill="#ffffff"/>
+        <rect x="45" width="15" height="40" fill="#d52b1e"/>
+        <path d="M30 10 L31.5 14 L35 13 L33 17 L37 19 L33 21 L35 25 L31.5 24 L30 28 L28.5 24 L25 25 L27 21 L23 19 L27 17 L25 13 L28.5 14 Z" fill="#d52b1e"/>
+      </svg>
+      <h2>Kanada<em>"Allez Les Rouges" — kolmas MM-kisa, ensimmäinen kotona</em></h2>
+      <span class="country-tag">Lohko B</span>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">FIFA-ranking</div>
+        <div class="value">30</div>
+      </div>
+      <div class="stat">
+        <div class="label">Avajaisottelu</div>
+        <div class="value">12.6.<span class="small">vs. BiH</span></div>
+      </div>
+      <div class="stat">
+        <div class="label">Ryhmä julki</div>
+        <div class="value">29.5.<span class="small">TSN</span></div>
+      </div>
+      <div class="stat">
+        <div class="label">MM-kisat</div>
+        <div class="value">3.<span class="small">(1986, 2022)</span></div>
+      </div>
+    </div>
+
+    <div class="article">
+
+      <!-- ARTICLE 1: Davies injury -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 1</span>
+          Loukkaantumiskriisi
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            CBC Sports (Chris Jones) · Canadian Soccer Daily · Sports Illustrated · The Mirror
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Alphonso Daviesin reisi, <em>Bayernin syytökset</em> ja Kanadan paniikki</h3>
+          <p>Kanadan mediakeskustelu on viimeisen kahden viikon ajan pyörinyt yhden polven kierteen ympärillä. Alphonso Davies — kapteeni, vasen pakki, koko maaohjelman kasvot — loukkasi vasemman takareitensä Bayern Münchenin Mestarien liigan välierässä PSG:tä vastaan 6.5. CBC Sportsin Chris Jonesin mukaan kyseessä on kolmas lihasvamma helmikuun jälkeen — toistuva ongelma, joka on tuonut "psyykkisiä haavoja sekä hänelle että hänen tukijoilleen".</p>
+
+          <div class="snippet">
+            <span class="source-tag">CBC Sports <span class="lang">(englanti)</span> <span class="date">14.5.2026</span></span>
+            <p>Bayern reagoi loukkaantumiseen syyttämällä Kanadan maaohjelmaa siitä, ettei Davies olisi saanut asianmukaisia lääketieteellisiä tarkastuksia ennen Saksaan lähtöä. Canada Soccer vastasi, että "asianmukaiset hoitokäytännöt täyttyivät". Saksalainen raportointi on huomattavasti pessimistisempää kuin kanadalainen — paranemisaika-arvio on Münchenissä lähempänä kuutta viikkoa, Torontossa lähempänä neljää.</p>
+            <a href="https://www.cbc.ca/sports/soccer/canada-soccer-notebook-alphonso-davies-bayern-chris-jones-may-14-9.7199187">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Tämä on toinen kierros samasta jännitteestä. Maaliskuussa 2025 Davies repi ACL-jänteen Nations Leaguen pronssiottelussa USA:ta vastaan, ja Bayern uhkasi Canada Socceria oikeustoimilla, kutsuen sen toimintaa "törkeän huolimattomaksi". Daviesin agentti Nedal Huoseh kritisoi tuolloin julkisesti Marschia, vaikka sittemmin vetäytyi väitteistään. Kanteeseen ei koskaan päädytty. Nyt sama draama on käynnistynyt uudelleen, ja se määrittää sitä, missä kunnossa kapteeni saapuu BMO Fieldille.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Canadian Soccer Daily <span class="lang">(englanti)</span> <span class="date">13.5.2026</span></span>
+            <p>Kanada toimitti FIFA:lle preliminaarisen 55 pelaajan listan määräaikaan mennessä, mutta toisin kuin moni muu liitto, ei julkista sitä. TSN:n Matthew Sciannitin mukaan päätöksen takana on Marschin halu pitää loukkaantuneet pelaajat mukana mahdollisimman pitkään. Lopullinen 26 hengen ryhmä julkistetaan 29.5. TSN:n suorassa lähetyksessä.</p>
+            <a href="https://canadiansoccerdaily.com/2026/05/13/canada-soccer-to-unveil-canmnt-world-cup-squad-on-may-29-not-publicly-sharing-preliminary-roster/">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Daviesin lisäksi maaohjelmaa rasittavat Moïse Bombiton (sääriluun murtuma lokakuussa, ei vielä täydessä kunnossa), Derek Corneliuksen (lihasvammat, ei pelannut Rangersissa marraskuun jälkeen) ja Alistair Johnstonin (jalkavamma, Old Firm -kohu Mikey Mooren rikkomuksen jäljiltä) tilanteet. Marsch lähetti maaliskuussa Kanadan oman fysioterapeutin Nizzaan auttamaan Bombiton kuntoutuksessa OGC Nicen kanssa — epätavallinen ele, joka kertoo siitä, miten tärkeäksi Marsch puolustuskeskuksen pelaajan kokee.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Hermostunut mutta hallitseva. Kanadalainen jalkapallolehdistö on selvästi ammattimaistunut viimeisten kahden vuoden aikana — Canadian Soccer Daily, OneSoccer ja CBC tuottavat nyt yksityiskohtaisempaa analyysiä kuin koskaan ennen. Tunnelma ei ole paniikissa mutta ei euforisessakaan: tämä on isäntämaa, joka tietää, että sen onnistumisen mittari on jatkopaikka, ei seremoniat.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 2: Marsch & Trump -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 2 — Politiikka</span>
+          Valmentaja vs. presidentti
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            TSN · Yahoo Sports · The Mirror · GB News · Toronto Star
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Jesse Marsch, <em>"51. osavaltio"</em> ja jalkapallon politisoituminen</h3>
+          <p>Kun amerikkalaissyntyinen Jesse Marsch siunaattiin Kanadan maajoukkueen valmentajaksi keväällä 2024, kukaan ei ennustanut, että hänestä tulisi yksi Yhdysvaltain ja Kanadan suhteiden tunnetuimpia kommentaattoreita. Helmikuussa 2025 Marsch julkitulee SoFi Stadiumin lehdistötilaisuudessa Inglewoodissa ja kohdistaa sanansa suoraan Donald Trumpille. TSN:n raportoima sitaatti on lyhyt mutta poliittisesti raskas: lopeta "naurettava retoriikka" Kanadan 51. osavaltioksi muuttamisesta.</p>
+
+          <div class="pullquote">
+            "Amerikkalaisena häpeän sitä röyhkeyttä ja ylimielisyyttä, jota olemme osoittaneet yhdelle historiamme vanhimmista, vahvimmista ja uskollisimmista liittolaisistamme."
+            <cite>Jesse Marsch — TSN:n lehdistötilaisuus, 26.2.2025</cite>
+          </div>
+
+          <p>Tämä ei jäänyt yhteen lausuntoon. Maaliskuussa Marsch johti Kanadan 2-1 -voittoon Yhdysvalloista CONCACAF Nations Leaguen pronssiottelussa — kahden peräkkäisen voiton sarja USA:sta. The Mirrorin raportoinnin mukaan "yli 50 ihmistä" varoitti Marschia hänen oman turvallisuutensa puolesta. Marschin vastaus oli kuiva: "Olen jalkapallovalmentaja, ihmiset eivät välitä mielipiteistäni — he välittävät siitä, voittaako joukkueeni." Marschin asetelma — Wisconsinissa syntynyt, Leeds Unitedia ja Salzburgia valmentanut — on tehnyt hänestä erityisen kiusallisen Valkoiselle talolle.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Yahoo Sports / The Independent <span class="lang">(englanti)</span> <span class="date">5.12.2025</span></span>
+            <p>Marschin sanat tulivat juuri ennen MM-kisojen arvontaa Washington D.C.:ssä. Hän kuvasi Kanadaa "vahvaksi, itsenäiseksi kansakunnaksi, jonka juuret ovat säädyllisyydessä", verraten sitä "polarisoituneeseen, epäkunnioittavaan ja vihamieliseen ilmapiiriin Yhdysvalloissa". Trump on toistanut 51. osavaltio -kommenttinsa toistuvasti — viimeisimmin kabinettikokouksessaan, jossa hän väitti, ettei Kanada ole "elinkelpoinen ilman amerikkalaista tukea".</p>
+          </div>
+
+          <p>Tämä poliittinen kerros — joka ei näy Sveitsin tai Qatarin median MM-keskustelussa — määrittää sitä, miltä Kanadan kotikenttäkokemus tuntuu kesäkuussa. NHL:n Four Nations Face-Off -finaalissa helmikuussa 2025 amerikkalaiset jalkapallofanit buuasivat Kanadan kansallislaulua; kanadalaiset vastasivat samalla mitalla. Toronto Starin ja CBC:n raportoinnin mukaan BMO Fieldille odotetaan 12.6. tunnelmaa, jossa kotikenttäetu ei ole vain äänekäs vaan poliittisesti latautunut. Bosnia osuu siihen tilanteeseen vahingossa — tai ehkä onneksi, sillä Bosnia ei ole Yhdysvaltoja.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Periaatteellisuus ja ylpeys. Kanadalainen media ei yritä häivyttää Marschin poliittisia kommentteja vaan korostaa niitä — ne ovat osa kerronnan kulmaa, jossa MM-kisat ovat ennen kaikkea Kanadan suvereniteetin esitys. Kommentaattori Chris Jones (CBC) ja TSN:n Matthew Sciannitti ovat erityisen taipuvaisia tähän sävyyn.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 3: Tactics & Group of Life -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 3 — Taktiikka</span>
+          "Group of Life"
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Sports Illustrated · Goal.com Canada · RotoWire · CBC The Buzzer
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Marschin 4-4-2, Jonathan David ja kerran <em>"Group of Life"</em></h3>
+          <p>Kun Bosnia voitti Italian rangaistuspotkuissa 31.3., CBC Sports otsikoi seuraavana päivänä iskevästi: "Italian putoaminen on Kanadan onni." Kanada oli pelaamassa samanaikaisesti Tunisiaa vastaan BMO Fieldillä, ja pelaajat saivat tiedon Italian putoamisesta puhelimistaan bussissa. Italian sijaan Kanada saa lohkoonsa Bosnian, joka FIFA-rankingissa on 53 sijaa alempana — ja siitä syntyi nopeasti "Group of Life" -termi, kontrastina "Group of Death" -kliseelle.</p>
+
+          <div class="snippet">
+            <span class="source-tag">CBC Sports (The Buzzer) <span class="lang">(englanti)</span> <span class="date">1.4.2026</span></span>
+            <p>The Buzzerin kolumnisti totesi suoraan: vaikka Italian joukkue näyttäisi tällä hetkellä sekasortoiselta, italialaiset olisivat olleet vaarallisempi vastustaja kuin Bosnia. Kun Italia on poissa kuvioista, Kanada on selvästi B-lohkon kakkonen — ja jatkopaikka voitaisiin saavuttaa ensimmäistä kertaa Kanadan historiassa. Joukkueessa kapenee paikka neljään.</p>
+            <a href="https://www.cbc.ca/sports/the-buzzer-newsletter-canada-world-cup-preview-9.7150517">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Marschin järjestelmä on tunnetusti 4-4-2 — kuulemma jäykkä mutta puolustuksellisesti tehokas. Sports Illustrated arvioi tammikuun ennakossaan, että Kanada voi pelata seitsemän peräkkäistä puoliaikaa ilman maalintekoa (mikä tapahtui syksyllä 2025 ennen 2-0 Venezuela-voittoa), mutta puolustus on pitänyt Ranskan ja Kolumbian nollissa. Avauskokoonpano olisi terveellä ryhmällä: St. Clair maalilla; Laryea, Bombito, Cornelius ja Davies puolustuksessa; Buchanan, Koné, Eustáquio ja Ahmed keskikentällä; Jonathan David ja Cyle Larin kärjessä.</p>
+
+          <p>Jonathan David — Juventukseen siirtynyt 26-vuotias — on iso kysymys. CBC:n mukaan David "ei tehnyt maalia" Qatar 2022:ssa kolmessa ottelussa, ja Marschin onnistumisen mittari on saada Davidin Lille-tason produktiivisuus (25 maalia ja 12 syöttöä Champions League -kaudella 2024-25) toistettua maajoukkueessa. Maaliskuun ottelussa Islantia vastaan David teki kaksi maalia 2-0-tappioasemasta, mikä antoi Marschille uskoa.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Goal.com Canada <span class="lang">(englanti)</span> <span class="date">17.5.2026</span></span>
+            <p>Goal jakoi ryhmän neljään tasoon: "lukko mukaan", "lähes varma", "kuplassa" ja "ulkopuolella". Lukko mukaan: Jonathan David, Stephen Eustáquio, Tajon Buchanan, Ismael Koné, Ali Ahmed. Lähes varmat: Alistair Johnston, Cyle Larin, Niko Sigur (Hajduk Splitin oikea pakki / keskikenttä). Kuplassa: Daviesin terveys, Bombiton kuntoutus, Corneliuksen muoto — kolmikko, jonka erotus voi olla välierien ja lohkovaiheen välillä.</p>
+            <a href="https://www.goal.com/en-ca/lists/canmnt-world-cup-roster-tiers-larin-eustaquio-davies-injuries/blt513d230b935854e0">Lue alkuperäinen →</a>
+          </div>
+
+          <p>RotoWire ja Lineups.com ennakoivat avausottelua varovaisesti: Kanada suosikki kotikenttäedun ansiosta, mutta Bosnia "tulee Torontoon ilman mitään hävittävää ja selkeällä kiintopisteellä Džekossa". RotoWiren analyysi nostaa erityisesti esiin Bosnian erikoistilanneuhan — Kanadan keskuspuolustuksen on otettava huomioon Džekon pää koko ottelun ajan.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Realistisen toiveikas. Kukaan ei puhu välieristä, mutta lohkovaiheen ohittaminen on selkeä, mediassa toistuva tavoite. "Pot 1 -joukkue, jonka pitäisi tämä pystyä tekemään" — tämä lause kuuluu lähes joka analyysissä.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 4: Friendlies -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 4 — Valmistautuminen</span>
+          Charlotte, Edmonton, Montréal
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            TSN · Canada Soccer · CBC Sports · Sportsnet
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Charlotten esileiri, kaksi ystävyysottelua ja <em>ryhmänjulkistus Pier 17:n vastine</em></h3>
+          <p>Kanadan kokoontuminen alkaa Charlotteissa, Pohjois-Carolinassa, ennen siirtymistä Kanadaan ystävyysotteluihin. 1.6. Kanada kohtaa Uzbekistanin Edmontonissa, 5.6. Irlannin Montréalissa — kaksi ottelua, joista Marsch viilaa avauskokoonpanoaan. Bosnian valmistautumiseen kuuluu sama Pohjois-Makedonia-ystävyysottelu 29.5. (Sarajevossa) sekä Panama 6.6. St. Louisissa.</p>
+
+          <p>Ryhmänjulkistus 29.5. TSN:n suorassa lähetyksessä on ensimmäinen kerta, kun Kanadan jalkapalloliitto järjestää julkisen "roster reveal" -tapahtuman. Tämä on selvä ele USA:n suuntaan — Pochettinon vastaava tapahtuma 26.5. New Yorkin Pier 17:ssä on saanut paljon mediahuomiota, ja Kanada haluaa oman versionsa. Sportsnetin mukaan tapahtuma sisältää sekä englannin- että ranskankielisen osuuden, mikä on tärkeää quebeciläiselle yleisölle ja CONCACAF-ennakointiongelmille.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Hieman hermostunut. TSN ja CBC korostavat aikataulun tiukkuutta — kun ystävyysottelut on pelattu 5.6. ja avausottelu pelataan 12.6., välissä on vain viikko, jossa Marsch joutuu päättämään lopullisesti taktiikastaan ja avauksesta.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============= BOSNIA ============= -->
+  <div class="section-mark">
+    <span class="num">II.</span>
+    <span>Vastustaja — Bosnia-Hertsegovinan media</span>
+  </div>
+
+  <section class="country bosnia">
+    <header class="country-header">
+      <svg class="country-flag" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+        <rect width="60" height="40" fill="#002395"/>
+        <polygon points="14,2 30,38 14,38" fill="#fecb00"/>
+        <g fill="#ffffff">
+          <polygon points="14.5,2.5 13.3,5.7 16.5,5.7"/>
+          <polygon points="17,7 15.8,10.2 19,10.2"/>
+          <polygon points="19.5,11.5 18.3,14.7 21.5,14.7"/>
+          <polygon points="22,16 20.8,19.2 24,19.2"/>
+          <polygon points="24.5,20.5 23.3,23.7 26.5,23.7"/>
+          <polygon points="27,25 25.8,28.2 29,28.2"/>
+          <polygon points="29.5,29.5 28.3,32.7 31.5,32.7"/>
+          <polygon points="32,34 30.8,37.2 34,37.2"/>
+        </g>
+      </svg>
+      <h2>Bosnia-Hertsegovina<em>"Zmajevi" — toiset MM-kisat ikinä, 12 vuotta tauon jälkeen</em></h2>
+      <span class="country-tag">Lohko B</span>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">FIFA-ranking</div>
+        <div class="value">53</div>
+      </div>
+      <div class="stat">
+        <div class="label">Selektor</div>
+        <div class="value">Barbarez<span class="small">2024–</span></div>
+      </div>
+      <div class="stat">
+        <div class="label">26 julki</div>
+        <div class="value">11.5.<span class="small">ensimmäisenä</span></div>
+      </div>
+      <div class="stat">
+        <div class="label">MM-kisat</div>
+        <div class="value">2.<span class="small">(2014)</span></div>
+      </div>
+    </div>
+
+    <div class="article">
+
+      <!-- ARTICLE 1: Italy victory legacy -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 1 — Tausta</span>
+          Zenican yö
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Klix.ba · Sportsport.ba · Tacno.net · Faktor.ba · Avaz
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>"Zenica on meidän Shawshankimme" — <em>Italian putoaminen ja kansakunnan tunne</em></h3>
+          <p>Jos haluaa ymmärtää, miksi Bosnia-Hertsegovinan media puhuu MM-kisoista lähes mystisellä äänenpainolla, on aloitettava 31.3.2026 ja Bilino Polje -stadionista Zenicassa. Sergej Barbarezin Zmajevit ("Lohikäärmeet") voittivat Italian rangaistuspotkukilpailussa 4-1 (1-1 90 minuutin jälkeen) ja pudottivat neljä kertaa maailmanmestarin maan kolmansiin peräkkäisiin MM-karsintojen ulkopuolelle. Klix.ba kutsui sitä "vuosisadan jalkapallotapahtumaksi". Tacno.netin Aldin Bajramovićin essee viikon päästä sisälsi tämän rinnastuksen:</p>
+
+          <div class="pullquote">
+            "Zenica on muodostunut maajoukkueemme Shawshankiksi — vapautumisen paikka kaikille hukatuille mahdollisuuksille, hävityille otteluille, kaikille turhautumisille ja pettymyksille, joita Zmajevit ovat aiempina vuosina meille tarjonneet."
+            <cite>Aldin Bajramović, Tacno.net — 9.4.2026</cite>
+          </div>
+
+          <p>Tärkeää on tämä: voitto tuli Edin Džekon maalista, mutta päärankaisemaan astui 18-vuotias Kerim Alajbegović (Red Bull Salzburg). Hän laittoi sekä Walesin (semifinaalissa Cardiffissa) että Italian (finaalissa) avauspotkun verkkoon. Faktor.ba kirjoittaa, että Alajbegovićille rakennetaan jo MM-kisojen jälkeistä "moottoria seuraavalle vuosikymmenelle". Bosnian Football Twitterissä häntä kutsutaan "kockar Sergej" -metaforan keskukseksi: Barbarez, joka ei kykennyt valmentajaksi mutta on entinen pokerinpelaaja, "potkaisi juniorit Donnarummaan vastaan" ja voitti pelin.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Klix.ba <span class="lang">(bosnia)</span> <span class="date">1.4.2026</span></span>
+            <p>Vukanović, opposition Liste za pravdu i red -puolueen johtaja, kommentoi voittoa: Edin Džeko on 41-vuotiaana juossut ja taistellut 120 minuuttia, ja MM-paikka Amerikkaan on "elämän palkinto" hänen uransa kruunauksesta. Tämä on tyypillistä bosnialaista mediasävyä: politiikan ja jalkapallon raja häviää, kun on kyse maajoukkueesta.</p>
+            <a href="https://www.klix.ba/vijesti/bih/vukanovic-nakon-historijske-noci-zmajevi-su-primjer-kako-se-bori-za-drzavu-dzeko-je-dobio-krunu-karijere/260401182">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Konteksti: Italia oli noussut karsinnoissa Bosnian voittajaksi H-lohkossa, mutta Bosnia jäi pisteittä vain Itävaltaa vastaan ​​(2-1 -tappio Zenicassa, 1-1 Wienissä). Bosnia siirtyi Nations League -reitiin barrageiin, joissa se voitti ensin Walesin 3-1 -rangaistuspotkukilpailussa Cardiffissa, sitten Italian samalla logiikalla Zenicassa. Tacno.netin Bajramović korostaa: Bosnialla oli tuolloin "vain 18 pelaajaa" käytettävissään yhden valmentajavaihdoksen jäljiltä, kun taas Italialla penkillä oli vaihdoissa Dimarco, Cristante ja Retegui. Tämä epätasapaino on osa Bosnian tarinaa — pieni maa, pienet resurssit, suuri voitto.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Euforinen mutta haavoittuva. Bosnialainen lehdistö on viimeisten kahden kuukauden ajan elänyt eräänlaisessa kollektiivisessa hurmiossa — Tacno.net, Klix.ba ja Sportsport.ba tuottavat lähes päivittäin runollisia kolumneja Barbarezin "kockar" (pelaaja, pokerimainen) -valmennustyylistä.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 2: Roster announcement -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 2</span>
+          Barbarezin nopea liike
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Klix.ba · Sportsport.ba · Index.hr · Zenit.ba · Avaz
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Maailman ensimmäinen MM-ryhmä: <em>Bosnia julkaisee 11.5., kaksi nimeä lähetti shokkiaaltoja</em></h3>
+          <p>Bosnia-Hertsegovina oli ensimmäinen koko turnauksen 48 maasta, joka julkisti lopullisen 26 pelaajan MM-ryhmänsä. Klix.ba lähetti suorana Barbarezin tiedotustilaisuuden Sarajevon Nogometnog saveza BiH -toimistosta 11.5. klo 14. Barbarez selitti päätöstä: liitto halusi "rauhaa", jotta valmistautumisleirit ja ystävyysottelut Pohjois-Makedoniaa (29.5. Sarajevo) ja Panamaa (6.6. St. Louis) vastaan ​​voidaan suunnitella ilman jatkuvaa epävarmuutta.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Index.hr <span class="lang">(kroaatti)</span> <span class="date">11.5.2026</span></span>
+            <p>Index.hr (Zagreb) raportoi nopeasti, että listalla on kolme SuperSport HNL:n (Kroatian liiga) pelaajaa: maalivahdit Martin Zlomislić (Rijeka) ja Osman Hadžikić (Slaven Belupo) sekä Rijekan keskuspuolustaja Stjepan Radeljić. Tämä on aiheuttanut keskustelua bosnialaisissa kommenteissa siitä, missä määrin pelaajia "tuodaan" diasporasta tai naapurimaista — kysymys, joka heijastaa Bosnian etnistä jakautumista.</p>
+            <a href="https://www.index.hr/sport/clanak/barbarez-objavio-popis-igraca-za-svjetsko-prvenstvo/2790865.aspx">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Ainoa täysin uusi nimi listalla on Ermin Mahmić — pelaaja, joka aiemmin pelasi Itävallan junioritasoilla, mutta päätti valita Bosnian. Sportsport.ba:n press-konferenssin lainauksen mukaan Barbarez kertoi, että Mahmić soitti hänelle "ennen leikkausta" ja kysyi, voidaanko hänen vammaansa hoitaa toisin, jotta hän olisi 23.5. valmis MM-leiriin. Tämä yksityiskohta — pelaaja siirtää leikkausta päästäkseen kotijoukkueeseen — on Bosnian medioissa lähes uskonnollinen anekdootti.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Sportsport.ba <span class="lang">(bosnia)</span> <span class="date">11.5.2026</span></span>
+            <p>Press-tilaisuudessa Barbarez sai kysymyksen viesteistään joukkueelle. Vastaus oli laconinen: "Saanko olla rehellinen — sanoisin pojille, että nauttikaa ja tehkää parhaanne." Yhdistys on samalla julkaissut uuden vierasasun — sininen, jonka suunnitteluun selektor itse osallistui. Suunnitteluun "varauduttiin Italia-ottelua varten", mutta paljastetaan vasta Pohjois-Makedonia-ottelussa.</p>
+            <a href="https://sportsport.ba/fudbal/barbarez-press-spisak-zmajevi-svjetsko-prvenstvo-2026/521845">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Ryhmän ytimet ovat: maalivahti Nikola Vasilj (St. Pauli), kapteeni Edin Džeko (Fenerbahçe, 41-v.), Sead Kolašinac (Atalanta), Amar Dedić (Benfica), Benjamin Tahirović (Brøndby), Esmir Bajraktarević (PSV) ja kärki Ermedin Demirović (Stuttgart). Pelaaja, jota kaikki seuraavat: Tarik Muharemović (Sassuolo), 23-vuotias keskuspuolustaja, joka pelasi ratkaisevan roolin Italia-ottelussa. Klix.ba huomautti, että kun MM-Panini-tarrojen kerääjät selailevat Sarajevossa albumiaan, kaksi nimeä puuttuu yleisimmin: Mujakić ja Demirović.</p>
+
+          <p>Hadžiahmetović (Hull City, lihasvamma) ja Adrian Leon Barišić (leikkaus) ovat varmasti pois. Ohjelman ytimellä on yksi paradoksi: vain Džekolla ja Kolašinacilla on aikaisempaa MM-kokemusta (Brasilia 2014). FIFAn Panini-virallinen sopimus on Klix.ba:n mukaan suosinut "Debi"-merkintää debytanttien paitojen takaa — koko Bosnian joukkue Džekon ja Kolašinacin lisäksi käyttää tätä merkkiä.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Itsevarma ja tietoinen. Bosnialaiset toimittajat (erityisesti Sportsport.ba:n Vehid Selimbegović) ovat kommentoineet, että 26 hengen ryhmän nopea julkistaminen oli "viesti maailmalle" — Bosnia ei piilottele, ei pelkää, ei suoja avoimena loukkaantumisten varalta.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 3: Tactics -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 3 — Taktiikka</span>
+          Barbarezin filosofia
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Tacno.net · Avaz · Klix.ba · RotoWire · MLSsoccer
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>"Tiho i hladno" — Barbarezin <em>hiljainen, kylmä rakentamisen filosofia</em></h3>
+          <p>Tacno.netin essee on tähän mennessä paras bosnialainen lukuparas tästä turnauksesta. Bajramović kuvaa Sergej Barbarezia siitä näkökulmasta, että hänellä ei ole "valmentajauralla mitään merkittävää referenssiä" — hän pelasi ammattilaiskautensa jälkeen kasinoissa pokeria — mutta vastauksena hänestä on tullut Bosnian historian merkittävin selektor sitten Safet Sušićin (joka vei joukkueen Brasilia 2014:ään). Hänen tyylinsä on "uvek 'ladan k'o špricer, uvek opasno tih" — aina kylmä kuin viinispritzeri, aina vaarallisen hiljainen.</p>
+
+          <p>Konkreettisia taktisia havaintoja:</p>
+          <ul style="margin: 1rem 0 1rem 1.5rem; font-size: 1.02rem; line-height: 1.7; color: var(--ink-2);">
+            <li><strong>Formaatio.</strong> Ydin 3-5-2 / 5-3-2-vaihtoehdolla. Sead Kolašinac, Tarik Muharemović ja Amar Dedić keskuspuolustuksessa. Eturivissä Džeko ja Demirović vaihtelevasti — toisinaan toinen putoaa "raumalle" sieppaamaan keskikenttäpalloja.</li>
+            <li><strong>Erikoistilanteet.</strong> Tämä on Bosnian suurin uhka Kanadalle. Džeko on 39-vuotiaana yhä parhaita kulmapotkujen päitä Euroopassa. RotoWire varoittaa erityisesti: Bombiton ja Corneliuksen on tunnettava Džekon liikkeet kuin omat taskunsa.</li>
+            <li><strong>Rangaistuspotkut.</strong> Bosnia voitti sekä Walesin että Italian rangaistuspotkukilpailussa — pelaajat ovat henkisesti rakentaneet itselleen "rangaistusten joukkue"-identiteetin. Jos Kanada päästää Bosnian rangaistuspotkuihin lohkovaiheen kolmannessa ottelussa, tilastot eivät puhu Kanadan puolesta.</li>
+            <li><strong>Mentaliteetti.</strong> Tacno.netin mukaan Barbarezin suurin saavutus on "kult reprezentacije" — kansalliskulttuuri, jossa edustusoikeudesta on poistettu kaikenlainen liechtensteinmainen kaupankäynti. Pelaajat, jotka eivät halua pelata Bosnialle, jätetään pois — Anel Ahmedhodžić mukaan lukien.</li>
+          </ul>
+
+          <div class="pullquote">
+            "Sergej rakensi joukkueen tyynesti ja kylmästi, viilasi taktiikan käytettävissä oleviin pelaajiin, ja tiesi aina, ettei pallon pyöreys ja kortin houkutus ole kovin kaukana toisistaan."
+            <cite>Aldin Bajramović, Tacno.net — 9.4.2026</cite>
+          </div>
+
+          <p>RotoWire ennakoi avausottelua selkeästi: ratkaiseva peli on Sveitsi vs. Bosnia 18.6. Jos Bosnia voittaa Sveitsin, se on vakavasti otettava ehdokas toiseen sijaan. Jos häviää, Kanadan tie jatkokarsintaan avautuu huomattavasti. Tämä on Bosnian tärkein taktinen kysymys: laittaako Barbarez kaiken Sveitsi-otteluun ja pelaako Kanadaa vastaan varovaisemmin?</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Itseluottamuksen ja varovaisuuden sekoitus. Bosnialaiset jalkapalloblogit (Sport1.ba, Bosnian Football Twitter) puhuvat Sveitsi-ottelusta lohkovaiheen "todellisena finaalina". Kanada-ottelu on emotionaalinen — Toronton bosnialainen diaspora odotetaan paikalle suurin joukoin — mutta strategisesti Sveitsi on Bosnian ratkaisukohta.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 4: Politics & continuity -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 4 — Politiikka</span>
+          Yksi joukkue, kolme kansallisuutta
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Faktor.ba · Klix.ba · Tacno.net · Radio Sarajevo
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>Etninen rajaviiva, <em>Spahićin "ihme"</em> ja seuraava sukupolvi</h3>
+          <p>Tämä on Bosnian kerronnan sivujuonne, jota Kanadan medioissa ei juuri nosteta — mutta jota bosnialaisten lehdistössä mainitaan toistuvasti. Bosnian jalkapallomaajoukkue on yksi harvoja instituutioita, joissa kaikki kolme valtiollista kansallisuutta (bosniakit, kroaatit, serbit) tulevat saman lipun alle. Vaikka Republika Srpskan johtaja Milorad Dodik on viime vuosina puhunut systemaattisesti Bosnian "hajoamisesta" valtiona, jalkapallomaajoukkueen plasmaani Mundijaliin on tuottanut harvinaisen yhtenäisyyden hetken.</p>
+
+          <p>Klix.ba:n raportointi 1.4. nosti esiin sen, että voitto Italiasta sai myös serbiyhteyteen sympatioita lähtevien poliitikkojen (mm. Vukanović) puhumaan voitosta "valtion menestyksenä". Faktor.ba huomautti samalla, että Hercegovinassa kroaatit "elävät Kroatian puolesta" — jako, joka jää, mutta jonka päälle Zmajevit ovat saaneet ainakin hetken aikaa yhden harvinaisen yhteisen kerronnan.</p>
+
+          <div class="snippet">
+            <span class="source-tag">Faktor.ba <span class="lang">(bosnia)</span> <span class="date">9.4.2026</span></span>
+            <p>Faktor.ba korosti johtaja-Emir Spahićin (entinen Bosnian puolustuksen tukipilari) roolia maaohjelman direktorina. Hän "kohtasi monia liiton sisäisiä ongelmia, joiden vuoksi hän jopa harkitsi luovuttamista". Mutta hän ei luovuttanut — ja Spahićin ansiosta nuoria (Alajbegović, Bajraktarević, Eman Košpo) on voitu nostaa kärkijoukkueeseen ilman vanhemman polven hidastetta. Tämä on "Spahićin ihme" -kerronnan ydin.</p>
+            <a href="https://faktor.ba/sport/fudbal/barbarez-i-spahic-uz-plasman-na-mundijal-stvorili-cudo-zmajevi-ne-trebaju-brinuti-za-buducnost/251841">Lue alkuperäinen →</a>
+          </div>
+
+          <p>Klix.ba puolestaan dokumentoi 9.5. päivätyssä jutussa Sarajevon kaduilla kahta vanhempaa herraa, jotka keräävät Panini-tarroja yhdessä. He olivat saaneet kasaan 12 maajoukkueen 26 pelaajasta, mutta puuttuivat Vasilj, Dedić, Kolašinac, Mujakić, Tahirović, Demirović, Džeko ja Baždar. "Ja Luka tulee samaan", he kertoivat Klix.ba:n toimittajalle — Luka Modrić, jonka tarra liimataan samaan albumiin, vaikka hän pelaa Kroatialle. Tämä yksityiskohta on todennäköisesti merkityksellisempi kuin se ensilukemalla vaikuttaa: Bosnian ja Kroatian sukulaisuus jalkapallossa on kestänyt jopa 1990-luvun sodan jälkeen.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Ylpeä, mutta vaatimaton politiikan suhteen. Bosnialaiset toimittajat eivät nosta jalkapalloa "yhdistäjäksi" yli sen, mitä todella tapahtuu — mutta hetken aikaa Zmajevit ovat se asia, jota ainakin osa Republika Srpskasta jakaa.
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 5: Diaspora -->
+      <div class="article-block">
+        <div class="block-meta">
+          <span class="kicker">Pääaihe 5</span>
+          Toronton diaspora
+          <div class="sources">
+            <strong>Päälähteet</strong>
+            Klix.ba · Sportsport.ba · Toronto Star · CBC
+          </div>
+        </div>
+        <div class="block-content">
+          <h3>BMO Field on Bosnialle <em>"toinen kotikenttä"</em></h3>
+          <p>Bosniainen diaspora Yhdysvalloissa ja Kanadassa on 1990-luvun sodan ja sen jälkeisten muuttoaaltojen tulosta. Toronto, St. Louis (Bosnian valmistautumisleiri) ja Chicago ovat suurimpia keskittymiä. Klix.ba:n ja Sportsport.ba:n raportoinnin mukaan FSBiH (Bosnian jalkapalloliitto) on saanut Pohjois-Amerikan bosnialaiselta liikemiesyhteisöltä erityistä tukea valmistautumiseen.</p>
+
+          <p>Käytännön seurauksia: BMO Fieldille (45 500 katsojaa) Toronton bosnialaisia odotetaan tuhansin, ja he eivät ole pelkkä äänilähde — he ovat omistautuneita faneja, joiden joukossa on aikuisia joukkueen 2014 MM-jäännöksinä eläneitä. Toronto Star arvioi, että Kanadan kotikenttäetu ei välttämättä ole niin yksiselitteinen kuin oletetaan: noin neljäsosa BMO Fieldin tribuuneista saattaa olla bosnialaisten käytössä.</p>
+
+          <div class="tone">
+            <strong>Median sävy</strong>
+            Iloinen ja toiveikas. Klix.ba:n kolumnisti kirjoitti: "Toronto on bosnialaisille kotia, BMO Field on Zmajevien Bilino Polje meren toisella puolen."
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============= CROSSROADS ============= -->
+  <div class="section-mark">
+    <span class="num">III.</span>
+    <span>Kohtaaminen — Avausottelu 12.6.</span>
+  </div>
+
+  <div class="crossroads">
+    <h3>Sama ottelu, kaksi kerrontaa</h3>
+    <div class="crossroads-grid">
+      <div class="crossroads-side ca">
+        <h4>Kanadan näkökulma</h4>
+        <p>Tämä on isäntämaan ensimmäinen MM-ottelu kotimaassa, koskaan. Marsch on rakentanut neljä vuotta tätä yhtä iltaa varten. Kanadalainen media käsittelee sitä lähes urheilullisena suorittamisena: voittakaa, sillä lohkossa B se on selvä mahdollisuus. Daviesin terveys on kysymys, jonka vastauksen jokainen tietää vasta 12.6. illalla.</p>
+      </div>
+      <div class="crossroads-side bih">
+        <h4>Bosnian näkökulma</h4>
+        <p>Tämä on koko maan jalkapallohistorian merkittävin ottelu sitten Brasilia 2014:n. Bosnia tulee Torontoon ilman mitään hävittävää — tai tarkemmin, "mitään hävittävää sen lisäksi, mikä jo on hävitty". Klix.ba:n kolumnisti tiivisti: positiivinen tulos avauksessa muuttaa koko lohkovaiheen dynamiikan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= SYNTHESIS ============= -->
+  <div class="synthesis">
+    <div class="kicker">Lopuksi</div>
+    <h2>Kolme havaintoa, jotka kannattaa pitää mielessä turnauksen alkuun saakka</h2>
+    <ol>
+      <li><strong>Ryhmien julkistuspäivien aikataulu paljastaa filosofian.</strong> Bosnia julkisti ensimmäisenä koko 48 maan joukosta, Kanada viimeisten joukossa. Tämä ei ole sattuma vaan strategia: Bosnia haluaa "rauhaa" ja luottamusta, Kanada haluaa pitää Daviesin ja Bombiton vaihtoehdot avoimena viimeiseen hetkeen saakka. Molemmat tavat ovat puolustettavissa, mutta ne kertovat valmentajien temperamenteista enemmän kuin mikään press-tilaisuus.</li>
+
+      <li><strong>Politiikka ei ole reuna-aihe — se on osa Group B:n DNA:ta.</strong> Marschin julkinen Trump-kritiikki ja Bosnian sisäinen etnisen yhtenäisyyden hetki ovat saman ilmiön kaksi sivua: jalkapallon kyky kantaa kansallisia identiteettikysymyksiä, jotka eivät muuten näkyisi näin kirkkaasti. Kanada käyttää MM-kisoja itsenäisyytensä julistamiseen suhteessa Yhdysvaltoihin; Bosnia käyttää niitä yhdessä elämisen koetukseen.</li>
+
+      <li><strong>Avausottelu Torontossa on koko Group B:n psykologinen ratkaisukohta.</strong> Sveitsi vs. Bosnia 18.6. on tilastollisesti ratkaiseva, mutta Kanada–Bosnia 12.6. on emotionaalisesti määrittävä. Voittajakohta, joka antaa toiselle joukkueelle koko turnauksen ajaksi liikkumatilaa ja toiselle koko turnauksen ajaksi paineen — varsinkin kun kolmanneksi sijoittuneilla on 48 maan formaatissa selvä jatkomahdollisuus.</li>
+    </ol>
+  </div>
+
+  <!-- ============= FOOTER ============= -->
+  <footer>
+    <p class="signature">Hyvää seurantaa kisoihin, Riku.</p>
+    <p>MM2026-uutisagentti (Claude-projekti)</p>
+    <p>Paikallismediakatsaus &middot; Kanada ja Bosnia-Hertsegovina &middot; 19.5.2026</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
